@@ -51,10 +51,10 @@ module.exports = {
             family: `Raleway`,
             subsets: [`latin`],
           },
-          // {
-          //   family: `Open Sans`,
-          //   variants: [`400`, `700`],
-          // },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`],
+          },
         ],
       },
     },
