@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
-// import { Link } from "gatsby"
 import SEO from "../components/seo"
 import FancyButton from "../components/elements/FancyButton"
 import landingImage from "../images/me.jpg"
