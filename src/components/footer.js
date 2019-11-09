@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import Svg from "./elements/Svg"
 import { Icons as mediaIcons } from "./social-icons"
 
@@ -76,4 +77,8 @@ const Footer = ({ location }) => {
   ) : null
 }
 
-export default Router
+Footer.propTypes = {
+  location: PropTypes.string,
+}
+
+export default Footer

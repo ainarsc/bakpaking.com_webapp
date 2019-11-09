@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -57,6 +58,11 @@ const Header = ({ isTrue, imagePath, children }) => {
       </ImgContainer>
     </Fragment>
   )
+}
+
+Header.propTypes = {
+  isTrue: PropTypes.bool,
+  imagePath: PropTypes.string,
 }
 
 export default Header

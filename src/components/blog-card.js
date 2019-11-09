@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import styled from "styled-components"
 import FancyLine from "./elements/FancyLine"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
 // TODO: Implement helper function to slice each intro text down to some number of chars
 
@@ -85,6 +86,13 @@ const BlogCard = ({ title, intro, link, thumbnail }) => {
       <FancyLine />
     </Fragment>
   )
+}
+
+BlogCard.propTypes = {
+  title: PropTypes.string,
+  intro: PropTypes.string,
+  link: PropTypes.string,
+  thumbnail: PropTypes.string,
 }
 
 export default BlogCard

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Svg from "./elements/Svg"
+import PropTypes from "prop-types"
 
 const Container = styled.div`
   display: none;
@@ -42,6 +43,10 @@ const SocialIcons = ({ location }) => {
       />
     </Container>
   ) : null
+}
+
+SocialIcons.propTypes = {
+  location: PropTypes.string,
 }
 
 export default SocialIcons

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { connect } from "react-redux"
+import PropTypes from "prop-types"
 
 const Blur = styled.div`
   position: absolute;
@@ -11,6 +12,10 @@ const Blur = styled.div`
 
 const Backdrop = ({ isExpanded, children }) => {
   return <Blur open={isExpanded}>{children}</Blur>
+}
+
+Backdrop.propTypes = {
+  isExpanded: PropTypes.bool,
 }
 
 const mapState = ({ ui }) => {

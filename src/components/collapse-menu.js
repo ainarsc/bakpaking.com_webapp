@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 import { collapseNav } from "../state/actions/uiActions"
+import PropTypes from "prop-types"
 
 const CollapseWrapper = styled(animated.div)`
   background: ${({ theme }) => theme.secondaryLight};
@@ -95,6 +96,11 @@ const CollapseMenu = ({ isExpanded, collapseNav }) => {
   } else {
     return null
   }
+}
+
+CollapseMenu.propTypes = {
+  isExpanded: PropTypes.bool,
+  collapseNav: PropTypes.func,
 }
 
 const mapDispatch = {

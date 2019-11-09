@@ -6,6 +6,7 @@ import MenuIcon from "./elements/MenuIcon"
 import CollapseMenu from "./collapse-menu"
 import { useOnClickOutside } from "../hooks"
 import { collapseNav } from "../state/actions/uiActions"
+import PropTypes from "prop-types"
 
 /////// Nav Bar styling ////////
 const Container = styled.div`
@@ -126,10 +127,17 @@ const NavBar = ({ location, collapseNav, isExpanded }) => {
   ) : null
 }
 
+NavBar.propTypes = {
+  location: PropTypes.string,
+  collapseNav: PropTypes.func,
+  isExpanded: PropTypes.string,
+}
+
 const mapState = state => {
   const { ui } = state
   return { isExpanded: ui.isExpanded }
 }
+
 const mapDispatch = { collapseNav }
 
 export default connect(
