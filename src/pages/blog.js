@@ -1,6 +1,6 @@
 import React from "react"
+import Layout from "../components/layout"
 import BlogCard from "../components/blog-card"
-import Main from "../components/elements/Main"
 import SearchBar from "../components/search-bar"
 import image from "../images/tb3.jpg"
 import { H1 } from "../components/elements/H1"
@@ -16,7 +16,7 @@ const intro =
 
 const Blog = () => {
   return (
-    <Main>
+    <Layout>
       <SearchBar />
       <H1>LATEST BLOG POSTS</H1>
       <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
@@ -25,7 +25,7 @@ const Blog = () => {
       <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
       <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
       <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
-    </Main>
+    </Layout>
   )
 }
 
