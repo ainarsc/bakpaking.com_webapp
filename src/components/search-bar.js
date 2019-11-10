@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Icons as mediaIcons } from "./social-icons"
+import { Icons } from "../assets/Icons"
 import Svg from "./elements/Svg"
 
 const Container = styled.div`
@@ -111,11 +111,11 @@ const SearchBar = () => {
   return (
     <Container>
       <Button open={open} onClick={() => setOpen(!open)}>
-        <Svg small dataPath={mediaIcons.search.datapath} icon={"email"} />
-        <Svg small dataPath={mediaIcons.arrowUp.datapath} icon={"arrow"} />
+        <Svg small dataPath={Icons.search.datapath} icon={"email"} />
+        <Svg small dataPath={Icons.arrowUp.datapath} icon={"arrow"} />
       </Button>
       <SearchIcon>
-        <Svg small dataPath={mediaIcons.search.datapath} icon={"email"} />
+        <Svg small dataPath={Icons.search.datapath} icon={"email"} />
       </SearchIcon>
       <InputFields open={open}>
         <InputBar placeholder="Search" />

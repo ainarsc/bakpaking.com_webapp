@@ -1,8 +1,8 @@
 import React from "react"
-import Main from "../components/elements/Main"
+import Layout from "../components/layout"
 
 const Tips = () => {
-  return <Main>foo</Main>
+  return <Layout>foo</Layout>
 }
 
 export default Tips

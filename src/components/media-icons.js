@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Svg from "./elements/Svg"
 
+//TODO: Replace icon datapath with imported icons
 const Container = styled.div`
   display: none;
   @media only screen and (${({ theme }) => theme.laptopS}) {
@@ -15,7 +16,7 @@ const Container = styled.div`
   }
 `
 
-const SocialIcons = () => {
+const MediaIcons = () => {
   return (
     <Container>
       <Svg
@@ -42,4 +43,4 @@ const SocialIcons = () => {
   )
 }
 
-export default SocialIcons
+export default MediaIcons

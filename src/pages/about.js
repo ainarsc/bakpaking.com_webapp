@@ -1,5 +1,5 @@
 import React from "react"
-import photo from "../images/me3.jpg"
+import photo from "../images/me.jpg"
 import Header from "../components/blog-header"
 import Article from "../components/elements/Article"
 import Layout from "../components/layout"

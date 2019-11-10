@@ -13,7 +13,7 @@ import NavBar from "./navbar"
 import Footer from "./footer"
 import Main from "./main"
 import Backdrop from "./backdrop"
-import SocialIcons from "./social-icons"
+import MediaIcons from "./media-icons"
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
 
       <NavBar />
       <Backdrop>
-        <SocialIcons />
+        <MediaIcons />
         <Main>{children}</Main>
         <Footer />
       </Backdrop>

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import Svg from "./elements/Svg"
-import { Icons as mediaIcons } from "./social-icons"
+import { Icons as mediaIcons } from "../assets/Icons"
 
 const Container = styled.footer`
   padding: 0.5rem;
@@ -52,10 +52,8 @@ const Developed = styled.div`
   }
 `
 
-const Footer = ({ location }) => {
-  const currentPath = location.pathname
-
-  return currentPath !== "/" ? (
+const Footer = () => {
+  return (
     <Container>
       <Copyright>
         <p>&copy; 2019</p>
@@ -74,7 +72,7 @@ const Footer = ({ location }) => {
         <p>Developed by Ainars Ciesa</p>
       </Developed>
     </Container>
-  ) : null
+  )
 }
 
 Footer.propTypes = {
