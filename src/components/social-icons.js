@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Svg from "./elements/Svg"
-import PropTypes from "prop-types"
 
 const Container = styled.div`
   display: none;
@@ -16,10 +15,8 @@ const Container = styled.div`
   }
 `
 
-const SocialIcons = ({ location }) => {
-  const { pathname } = location
-
-  return pathname !== "/" ? (
+const SocialIcons = () => {
+  return (
     <Container>
       <Svg
         dataPath={
@@ -42,11 +39,7 @@ const SocialIcons = ({ location }) => {
         icon={"linkedin"}
       />
     </Container>
-  ) : null
-}
-
-SocialIcons.propTypes = {
-  location: PropTypes.string,
+  )
 }
 
 export default SocialIcons
