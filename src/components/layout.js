@@ -8,26 +8,34 @@
 import React from "react"
 import GlobalStyles from "../global"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+// import { useStaticQuery, graphql } from "gatsby"
+import NavBar from "./navbar"
+import Footer from "./footer"
+import Main from "./main"
+import { Location } from "gatsby"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
       <GlobalStyles />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
+      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <Location>
+        <NavBar />
+        <Main>{children}</Main>
+        <Footer />
+      </Location>
+
+      {/* <div
         style={{
           margin: `0 auto`,
           maxWidth: 960,
@@ -41,7 +49,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </div> */}
     </>
   )
 }

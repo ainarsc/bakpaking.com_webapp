@@ -86,8 +86,7 @@ const theme = {
 Container.defaultProps = { theme }
 Logo.defaultProps = { theme }
 
-const NavBar = ({ location, collapseNav, isExpanded }) => {
-  const currentPath = location.pathname
+const NavBar = ({ collapseNav, isExpanded }) => {
   const node = useRef()
 
   useOnClickOutside(node, () => {
@@ -95,7 +94,7 @@ const NavBar = ({ location, collapseNav, isExpanded }) => {
   })
 
   //Check if landing page, if so don't use the navbar
-  return currentPath !== "/" ? (
+  return (
     <div ref={node}>
       <Container>
         <Logo>
@@ -106,31 +105,30 @@ const NavBar = ({ location, collapseNav, isExpanded }) => {
         <MenuIcon />
         <NavLinks>
           <li>
-            <NavLink activeClassName="is-active" to="/blog">
+            <Link activeClassName="is-active" to="/blog">
               Blog
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink activeClassName="is-active" to="/tips">
+            <Link activeClassName="is-active" to="/tips">
               Travel Tips
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink activeClassName="is-active" to="/about">
+            <Link activeClassName="is-active" to="/about">
               About
-            </NavLink>
+            </Link>
           </li>
         </NavLinks>
       </Container>
       <CollapseMenu />
     </div>
-  ) : null
+  )
 }
 
 NavBar.propTypes = {
-  location: PropTypes.string,
   collapseNav: PropTypes.func,
-  isExpanded: PropTypes.string,
+  isExpanded: PropTypes.bool,
 }
 
 const mapState = state => {
