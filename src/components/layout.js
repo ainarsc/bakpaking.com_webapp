@@ -12,7 +12,8 @@ import PropTypes from "prop-types"
 import NavBar from "./navbar"
 import Footer from "./footer"
 import Main from "./main"
-import { Location } from "gatsby"
+import Backdrop from "./backdrop"
+import SocialIcons from "./social-icons"
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -29,11 +30,13 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Location>
-        <NavBar />
+
+      <NavBar />
+      <Backdrop>
+        <SocialIcons />
         <Main>{children}</Main>
         <Footer />
-      </Location>
+      </Backdrop>
 
       {/* <div
         style={{
