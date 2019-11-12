@@ -110,7 +110,7 @@ const NavBar = ({ collapseNav, isExpanded }) => {
             </Link>
           </li>
           <li>
-            <Link activeClassName="is-active" to="/tips">
+            <Link activeClassName="is-active" to="/travel-tips">
               Travel Tips
             </Link>
           </li>

@@ -2,11 +2,12 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import { connect } from "react-redux"
 import styled from "styled-components"
-import { useSpring, animated } from "react-spring"
+// import { useSpring, animated } from "react-spring"
 import { collapseNav } from "../state/actions/uiActions"
 import PropTypes from "prop-types"
 
-const CollapseWrapper = styled(animated.div)`
+// const CollapseWrapper = styled(animated.div)`
+const CollapseWrapper = styled.div`
   background: ${({ theme }) => theme.secondaryLight};
   position: fixed;
   top: 3.5rem;
@@ -41,7 +42,7 @@ const NavLinks = styled.ul`
 `
 
 const CollapseMenu = ({ isExpanded, collapseNav }) => {
-  const { open } = useSpring({ open: isExpanded ? 0 : 1 })
+  // const { open } = useSpring({ open: isExpanded ? 0 : 1 })
 
   useEffect(() => {
     const handler = () => isExpanded && collapseNav()
@@ -53,14 +54,14 @@ const CollapseMenu = ({ isExpanded, collapseNav }) => {
   if (isExpanded === true) {
     return (
       <CollapseWrapper
-        style={{
-          transform: open
-            .to({
-              range: [0, 0.2, 0.3, 1],
-              output: [0, -20, 0, -200],
-            })
-            .to(openValue => `translate3d(0, ${openValue}px, 0`),
-        }}
+      // style={{
+      //   transform: open
+      //     .to({
+      //       range: [0, 0.2, 0.3, 1],
+      //       output: [0, -20, 0, -200],
+      //     })
+      //     .to(openValue => `translate3d(0, ${openValue}px, 0`),
+      // }}
       >
         <NavLinks>
           <li>
