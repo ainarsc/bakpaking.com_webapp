@@ -46,13 +46,11 @@ const SubHeading = styled.h2`
   text-align: center;
 `
 
-const Header = ({ isTrue, imagePath, children }) => {
+const Header = ({ isTrue, imagePath, date, children }) => {
   return (
     <Fragment>
       <Heading>{children}</Heading>
-      {isTrue ? (
-        <SubHeading>October 14, 2019 by Ainars Ciesa</SubHeading>
-      ) : null}
+      {isTrue ? <SubHeading>{date} by Ainars Ciesa</SubHeading> : null}
       <ImgContainer>
         <Img src={imagePath} />
       </ImgContainer>
