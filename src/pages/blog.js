@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BlogCard from "../components/blog-card"
 import SearchBar from "../components/search-bar"
@@ -7,26 +8,46 @@ import { H1 } from "../components/elements/H1"
 
 //Temp variables
 const post = "/post"
-const title = "Post Title"
-const intro =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
 
 //TODO:
 // Component that fetches post given certain tag or criteria
 
-const Blog = () => {
+const Blog = ({ data }) => {
+  const { allMarkdownRemark } = data
+  const { edges } = allMarkdownRemark
+
   return (
     <Layout>
       <SearchBar />
       <H1>LATEST BLOG POSTS</H1>
-      <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
-      <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
-      <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
-      <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
-      <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
-      <BlogCard title={title} intro={intro} link={post} thumbnail={image} />
+      {edges.map(({ node }) => (
+        <BlogCard
+          key={node.id}
+          title={node.frontmatter.title}
+          intro={node.excerpt}
+          link={post}
+          thumbnail={image}
+        />
+      ))}
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
 
 export default Blog
