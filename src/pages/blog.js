@@ -6,15 +6,13 @@ import SearchBar from "../components/search-bar"
 import image from "../images/tb3.jpg"
 import { H1 } from "../components/elements/H1"
 
-//Temp variables
-const post = "/post"
-
 //TODO:
 // Component that fetches post given certain tag or criteria
 
 const Blog = ({ data }) => {
   const { allMarkdownRemark } = data
   const { edges } = allMarkdownRemark
+  const blogURL = "/blog/posts"
 
   return (
     <Layout>
@@ -25,7 +23,7 @@ const Blog = ({ data }) => {
           key={node.id}
           title={node.frontmatter.title}
           intro={node.excerpt}
-          link={post}
+          link={blogURL + node.frontmatter.path}
           thumbnail={image}
         />
       ))}
@@ -40,6 +38,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            path
             title
             date(formatString: "DD MMMM, YYYY")
           }

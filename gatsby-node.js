@@ -16,30 +16,30 @@ const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  const result = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
+  try {
+    const result = await graphql(`
+      query {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                path
+              }
             }
           }
         }
       }
-    }
-  `)
-
-  const { edges } = result.data.allMarkdownRemark
-
-  edges.forEach(({ node }) => {
-    const postURL = `/blog/posts${node.frontmatter.path}`
-    createPage({
-      path: postURL,
-      component: require.resolve(`./src/templates/post.js`),
-      context: {
-        path: postURL,
-      },
+    `)
+    const { edges } = result.data.allMarkdownRemark
+    edges.forEach(({ node }) => {
+      const postPath = node.frontmatter.path
+      createPage({
+        path: `/blog/posts${postPath}`,
+        component: require.resolve(`./src/templates/post.js`),
+        context: { postPath: postPath },
+      })
     })
-  })
+  } catch (err) {
+    console.log("[gatsby-node]: --- " + err)
+  }
 }
