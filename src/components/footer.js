@@ -56,7 +56,7 @@ const Footer = () => {
   return (
     <Container>
       <Copyright>
-        <p>&copy; 2019</p>
+        <span>© {new Date().getFullYear()}</span>
       </Copyright>
       <Icons>
         <Svg small dataPath={mediaIcons.facebook.datapath} icon={"facebook"} />

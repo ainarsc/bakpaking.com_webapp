@@ -2,7 +2,6 @@ import React from "react"
 import Header from "../components/blog-header"
 import Article from "../components/elements/Article"
 import { graphql } from "gatsby"
-// import image from "../images/tb3.jpg"
 import Layout from "../components/layout"
 
 const Post = ({ data }) => {
