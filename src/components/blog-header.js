@@ -18,14 +18,6 @@ const ImgContainer = styled.div`
   }
 `
 
-// const Img = styled.img`
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-//   border: 1px solid rgba(255, 255, 255, 0.2);
-// `
-
 const Heading = styled.h1`
   font-size: 2rem;
   margin-bottom: 5px;

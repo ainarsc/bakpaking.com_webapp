@@ -4,8 +4,6 @@ import SEO from "../components/seo"
 import FancyButton from "../components/elements/FancyButton"
 import landingImage from "../images/me.jpg"
 import GlobalStyles from "../global"
-// import Layout from "../components/layout"
-// import Image from "../components/image"
 
 const BackgroundImage = styled.section`
   height: 100vh;
