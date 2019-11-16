@@ -10,12 +10,8 @@ const ImgContainer = styled.div`
   background: rgba(0, 0, 0, 0.5);
   margin-top: 0.8rem;
 
-  /* @media only screen and (${({ theme }) => theme.mobileL}) {
-    min-height: 330px;
-  } */
   @media only screen and (${({ theme }) => theme.tablet}) {
     width: 80%;
-    /* min-height: 430px; */
   }
   @media only screen and (${({ theme }) => theme.laptopS}) {
     width: 60%;
@@ -58,7 +54,7 @@ const Header = ({ isTrue, imagePath, date, children }) => {
 
 Header.propTypes = {
   isTrue: PropTypes.bool,
-  // imagePath: PropTypes.string,
+  imagePath: PropTypes.object,
 }
 
 export default Header

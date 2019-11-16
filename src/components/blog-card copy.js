@@ -47,12 +47,12 @@ const LeftSide = styled.div`
   @media only screen and (${({ theme }) => theme.tablet}) {
     max-width: 15rem;
     max-height: 10rem;
-    align-self: center;
   }
   @media only screen and (${({ theme }) => theme.laptopS}) {
     max-height: 10rem;
   }
   @media only screen and (${({ theme }) => theme.laptopL}) {
+    max-width: 20rem;
     max-height: 10rem;
     align-self: center;
     /* align-self: flex-start; */
@@ -63,7 +63,7 @@ const RightSide = styled.div`
   text-align: center;
   align-self: center;
   h1 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
   }
   p {
