@@ -2,6 +2,7 @@
 title: How To Travel On Budget
 date: 2019-11-23
 path: /how-to-travel-on-budget
+featuredImg: tb5.jpg
 published: true
 ---
 

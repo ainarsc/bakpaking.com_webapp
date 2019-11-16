@@ -34,7 +34,7 @@ exports.createPages = async ({ actions, graphql }) => {
     edges.forEach(({ node }) => {
       const postPath = node.frontmatter.path
       createPage({
-        path: `/blog/posts${postPath}`,
+        path: `/blog${postPath}`,
         component: require.resolve(`./src/templates/post.js`),
         context: { postPath: postPath },
       })

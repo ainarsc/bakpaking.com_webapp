@@ -2,7 +2,7 @@
 title: How To Buy a Motorbike in Vietnam
 date: 2019-11-20
 path: /how-to-by-a-motorbike-in-vietnam
-
+featuredImg: tb1.jpg
 published: true
 ---
 

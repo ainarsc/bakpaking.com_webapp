@@ -2,16 +2,20 @@ import React from "react"
 import Header from "../components/blog-header"
 import Article from "../components/elements/Article"
 import { graphql } from "gatsby"
-import image from "../images/tb3.jpg"
+// import image from "../images/tb3.jpg"
 import Layout from "../components/layout"
 
 const Post = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  let { markdownRemark } = data
+  let { frontmatter, html } = markdownRemark
 
   return (
     <Layout>
-      <Header imagePath={image} isTrue={true} date={frontmatter.date}>
+      <Header
+        imagePath={frontmatter.featuredImg.childImageSharp.fluid}
+        isTrue={true}
+        date={frontmatter.date}
+      >
         {frontmatter.title}
       </Header>
       <Article dangerouslySetInnerHTML={{ __html: html }} />
@@ -27,6 +31,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        featuredImg {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

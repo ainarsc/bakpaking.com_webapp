@@ -3,6 +3,7 @@ import styled from "styled-components"
 import FancyLine from "./elements/FancyLine"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
 
 // TODO: Implement helper function to slice each intro text down to some number of chars
 
@@ -73,7 +74,7 @@ const BlogCard = ({ title, intro, link, thumbnail }) => {
       <Link to={link}>
         <Container>
           <LeftSide>
-            <Thumbnail src={thumbnail} />
+            <Img fluid={thumbnail} />
           </LeftSide>
           <RightSide>
             <article>

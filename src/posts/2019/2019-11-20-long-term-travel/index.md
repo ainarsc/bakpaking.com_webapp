@@ -2,6 +2,7 @@
 title: long term travel
 date: 2019-11-23
 path: /long-term-travel
+featuredImg: tb2.jpg
 published: true
 ---
 

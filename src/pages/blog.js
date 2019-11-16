@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BlogCard from "../components/blog-card"
 import SearchBar from "../components/search-bar"
-import image from "../images/tb3.jpg"
+// import image from "../images/tb3.jpg"
 import { H1 } from "../components/elements/H1"
 
 //TODO:
@@ -12,7 +12,7 @@ import { H1 } from "../components/elements/H1"
 const Blog = ({ data }) => {
   const { allMarkdownRemark } = data
   const { edges } = allMarkdownRemark
-  const blogURL = "/blog/posts"
+  const blogURL = "/blog"
 
   return (
     <Layout>
@@ -24,7 +24,7 @@ const Blog = ({ data }) => {
           title={node.frontmatter.title}
           intro={node.excerpt}
           link={blogURL + node.frontmatter.path}
-          thumbnail={image}
+          thumbnail={node.frontmatter.featuredImg.childImageSharp.fluid}
         />
       ))}
     </Layout>
@@ -41,6 +41,13 @@ export const query = graphql`
             path
             title
             date(formatString: "DD MMMM, YYYY")
+            featuredImg {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt
         }

@@ -2,6 +2,7 @@
 title: Solo Travel
 date: 2019-11-22
 path: /solo-travel
+featuredImg: tb3.jpg
 published: true
 ---
 
