@@ -5,19 +5,14 @@ import Img from "gatsby-image"
 
 const ImgContainer = styled.div`
   width: 100%;
-  min-height: 230px;
-  /* position: relative; */
+  max-height: 400px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
   margin-top: 0.8rem;
 
-  /* display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-content: center; */
-  @media only screen and (${({ theme }) => theme.mobileL}) {
+  /* @media only screen and (${({ theme }) => theme.mobileL}) {
     min-height: 330px;
-  }
+  } */
   @media only screen and (${({ theme }) => theme.tablet}) {
     width: 80%;
     /* min-height: 430px; */

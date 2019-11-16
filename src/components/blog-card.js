@@ -31,17 +31,18 @@ const Container = styled.div`
 `
 
 const LeftSide = styled.div`
-  width: 70%;
-  height: 15rem;
+  width: 100%;
+  max-height: 15rem;
   position: relative;
   align-self: center;
   overflow: hidden;
   background: ${({ theme }) => theme.primaryHover};
+  @media only screen and (${({ theme }) => theme.mobileL}) {
+    width: 80%;
+  }
   @media only screen and (${({ theme }) => theme.tabletS}) {
     width: 18rem;
-    min-height: 10rem;
-    height: auto;
-    align-self: auto;
+    max-height: 10rem;
   }
 `
 const RightSide = styled.div`
