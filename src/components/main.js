@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const MainContainer = styled.main`
   width: 80%;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 5rem auto 3rem;
   min-height: calc(100vh - 3.5rem - 8rem);
   display: flex;
