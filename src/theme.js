@@ -29,6 +29,11 @@ const theme = {
   laptopL: `min-width: ${size.laptopL}`,
   desktop: `min-width: ${size.desktop}`,
   desktopL: `min-width: ${size.desktop}`,
+
+  bgImg: {
+    small: "./images/me-s.jpg",
+    medium: "./images/me-m.jpg",
+  },
 }
 
 export default theme
