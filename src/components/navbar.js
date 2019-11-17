@@ -98,7 +98,7 @@ const NavBar = ({ collapseNav, isExpanded }) => {
     <div ref={node}>
       <Container>
         <Logo>
-          <Link onClick={() => collapseNav()} to="/">
+          <Link onClick={() => isExpanded && collapseNav()} to="/">
             AINARS ADVENTURES
           </Link>
         </Logo>
