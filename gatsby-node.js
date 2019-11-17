@@ -4,22 +4,42 @@ const { createFilePath } = require("gatsby-source-filesystem")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   try {
+    // const result = await graphql(`
+    //   query {
+    //     allMarkdownRemark {
+    //       edges {
+    //         node {
+    //           frontmatter {
+    //             path
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // `)
     const result = await graphql(`
       query {
-        allMarkdownRemark {
+        allFile(
+          filter: {
+            sourceInstanceName: { eq: "posts" }
+            extension: { eq: "md" }
+          }
+        ) {
           edges {
             node {
-              frontmatter {
-                path
+              childMarkdownRemark {
+                frontmatter {
+                  path
+                }
               }
             }
           }
         }
       }
     `)
-    const { edges } = result.data.allMarkdownRemark
+    const { edges } = result.data.allFile
     edges.forEach(({ node }) => {
-      const postPath = node.frontmatter.path
+      const postPath = node.childMarkdownRemark.frontmatter.path
       createPage({
         path: `/blog${postPath}`,
         component: require.resolve(`./src/templates/post.js`),

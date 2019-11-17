@@ -10,8 +10,9 @@ import { H1 } from "../components/elements/H1"
 // Component that fetches post given certain tag or criteria
 
 const Blog = ({ data }) => {
-  const { allMarkdownRemark } = data
-  const { edges } = allMarkdownRemark
+  let { allFile } = data
+  let { edges } = allFile
+
   const blogURL = "/blog"
 
   return (
@@ -20,11 +21,14 @@ const Blog = ({ data }) => {
       <H1>LATEST BLOG POSTS</H1>
       {edges.map(({ node }) => (
         <BlogCard
-          key={node.id}
-          title={node.frontmatter.title}
-          intro={node.excerpt}
-          link={blogURL + node.frontmatter.path}
-          thumbnail={node.frontmatter.featuredImg.childImageSharp.fluid}
+          key={node.childMarkdownRemark.id}
+          title={node.childMarkdownRemark.frontmatter.title}
+          intro={node.childMarkdownRemark.excerpt}
+          link={blogURL + node.childMarkdownRemark.frontmatter.path}
+          thumbnail={
+            node.childMarkdownRemark.frontmatter.featuredImg.childImageSharp
+              .fluid
+          }
         />
       ))}
     </Layout>
@@ -33,27 +37,57 @@ const Blog = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allFile(
+      filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "md" } }
+    ) {
       edges {
         node {
-          id
-          frontmatter {
-            path
-            title
-            date(formatString: "DD MMMM, YYYY")
-            featuredImg {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
+          childMarkdownRemark {
+            frontmatter {
+              path
+              published
+              title
+              date(formatString: "DD MMMM, YYYY")
+              featuredImg {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
+            excerpt(pruneLength: 300)
+            id
           }
-          excerpt(pruneLength: 300)
         }
       }
     }
   }
 `
+
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             path
+//             title
+//             date(formatString: "DD MMMM, YYYY")
+//             featuredImg {
+//               childImageSharp {
+//                 fluid {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//           excerpt(pruneLength: 300)
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Blog
