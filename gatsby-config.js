@@ -3,6 +3,7 @@ module.exports = {
     title: `No BS travel guide`,
     description: `Read about my experiences while travelling long term and on a budget`,
     author: `Ainars Ciesa`,
+    url: `https://www.travel.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
