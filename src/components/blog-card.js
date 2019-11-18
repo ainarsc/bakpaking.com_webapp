@@ -21,6 +21,7 @@ const Container = styled.div`
     :hover {
       background: ${({ theme }) => theme.secondaryHover};
       transform: scale(1.02);
+      transition-delay: 0.2s;
     }
   }
 `
