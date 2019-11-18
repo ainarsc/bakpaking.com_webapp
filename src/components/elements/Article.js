@@ -1,12 +1,17 @@
 import styled from "styled-components"
 
 const Article = styled.article`
-  width: 100%;
+  width: 90%;
+  max-width: 800px;
   margin: 2rem auto 0;
-  text-align: justify;
-  line-height: 1.8rem;
-  @media only screen and (${({ theme }) => theme.laptopS}) {
-    width: 80%;
+  text-align: center;
+  line-height: 1.5rem;
+  @media only screen and (${({ theme }) => theme.mobileL}) {
+    width: 100%;
+    line-height: 1.8rem;
+  }
+  @media only screen and (${({ theme }) => theme.tablet}) {
+    text-align: justify;
   }
 `
 

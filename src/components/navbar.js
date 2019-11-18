@@ -32,7 +32,7 @@ const Container = styled.div`
 const Logo = styled.div`
   padding-left: 1rem;
   a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0 0.4rem;
     border: 3px double ${({ theme }) => theme.primaryLight};
     color: ${({ theme }) => theme.primaryLight};
@@ -99,7 +99,7 @@ const NavBar = ({ collapseNav, isExpanded }) => {
       <Container>
         <Logo>
           <Link onClick={() => isExpanded && collapseNav()} to="/">
-            AINARS ADVENTURES
+            Ainar's Travels
           </Link>
         </Logo>
         <MenuIcon />

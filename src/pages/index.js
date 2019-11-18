@@ -16,6 +16,8 @@ const BackgroundImage = styled.div`
   background-image: url(${props => props.size.bgSmall});
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   filter: blur(3px);
 
   /* 
@@ -28,11 +30,8 @@ const BackgroundImage = styled.div`
   @media only screen and (${({ theme }) => theme.tabletS}) {
     background-image: url(${props => props.size.bgMedium});
   }
-  @media only screen and (${({ theme }) => theme.laptopS}) {
-    background-image: url(${props => props.size.bgLarge});
-  }
   @media only screen and (${({ theme }) => theme.laptopL}) {
-    background-image: url(${props => props.size.bgXL});
+    background-image: url(${props => props.size.bgLarge});
   }
 `
 
@@ -59,9 +58,13 @@ const Title = styled.h1`
 `
 
 const Highlight = styled.div`
+  width: 100%;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   justify-content: center;
+  @media only screen and (${({ theme }) => theme.mobileL}) {
+    width: auto;
+  }
 `
 
 const Line = styled.div`
