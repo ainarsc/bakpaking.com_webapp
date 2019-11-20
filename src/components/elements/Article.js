@@ -4,7 +4,7 @@ const Article = styled.article`
   width: 90%;
   max-width: 800px;
   margin: 2rem auto 0;
-  text-align: center;
+  text-align: left;
   line-height: 1.5rem;
   @media only screen and (${({ theme }) => theme.mobileL}) {
     width: 100%;

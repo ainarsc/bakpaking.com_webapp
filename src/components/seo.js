@@ -1,16 +1,10 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ title, desc, author, lang }) {
+  //Query the config file
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,63 +13,57 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
+            url
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  //Set variable
+  const title = title || site.siteMetadata.title
+  const description = desc || site.siteMetadata.description
+  const keywords = site.siteMetadata.keywords.join(",")
+  const url = site.siteMetadata.url
+  const author = site.siteMetadata.author
+  const image = null
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <Fragment>
+      <Helmet
+        htmlAttributes={{
+          lang: lang,
+        }}
+        titleTemplate={`%s | ${site.siteMetadata.title}`}
+      >
+        {/* General meta tags */}
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="author" content={author} />
+        <meta name="keywords" content={keywords} />
+        {/* OpenGraph tags */}
+        <meta property="og:url" content={url} />
+        {isBlogPost ? <meta property="og:type" content="article" /> : null}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="NO CREATOR FOUND" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+      </Helmet>
+    </Fragment>
   )
 }
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
   description: ``,
+  author: ``,
 }
 
 SEO.propTypes = {

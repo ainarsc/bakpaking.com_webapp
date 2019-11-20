@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `No BS travel guide`,
-    description: `Read about my experiences while travelling long term and on a budget`,
+    title: `Insert witty title here`,
+    description: `Insert default general app description here with keywords for SEO. Shows up on default for every page where description is not specified explicitly.`,
     author: `Ainars Ciesa`,
-    url: `https://www.travel.com`,
+    keywords: `travel long-term-travel travel-on-budget blog travel blog`,
+    image: `image-figure-it-out`,
+    url: `https://www.travelapp.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
