@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BlogCard from "../components/blog-card"
 import SearchBar from "../components/search-bar"
-// import image from "../images/tb3.jpg"
 import { H1 } from "../components/elements/H1"
+import SEO from "../components/seo"
 
 //TODO:
 // Component that fetches post given certain tag or criteria
@@ -16,22 +16,25 @@ const Blog = ({ data }) => {
   const blogURL = "/blog"
 
   return (
-    <Layout>
-      <SearchBar />
-      <H1>LATEST BLOG POSTS</H1>
-      {edges.map(({ node }) => (
-        <BlogCard
-          key={node.childMarkdownRemark.id}
-          title={node.childMarkdownRemark.frontmatter.title}
-          intro={node.childMarkdownRemark.excerpt}
-          link={blogURL + node.childMarkdownRemark.frontmatter.path}
-          thumbnail={
-            node.childMarkdownRemark.frontmatter.featuredImg.childImageSharp
-              .fluid
-          }
-        />
-      ))}
-    </Layout>
+    <>
+      <SEO title="Blog | Ainar's Travels" pathname={blogURL} />
+      <Layout>
+        <SearchBar />
+        <H1>LATEST BLOG POSTS</H1>
+        {edges.map(({ node }) => (
+          <BlogCard
+            key={node.childMarkdownRemark.id}
+            title={node.childMarkdownRemark.frontmatter.title}
+            intro={node.childMarkdownRemark.excerpt}
+            link={blogURL + node.childMarkdownRemark.frontmatter.path}
+            thumbnail={
+              node.childMarkdownRemark.frontmatter.featuredImg.childImageSharp
+                .fluid
+            }
+          />
+        ))}
+      </Layout>
+    </>
   )
 }
 

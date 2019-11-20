@@ -78,7 +78,7 @@ const IndexPage = () => {
   return (
     <Fragment>
       <GlobalStyles />
-      <SEO title="Home" />
+      <SEO />
       <BackgroundImage size={sizes} />
 
       <Container>

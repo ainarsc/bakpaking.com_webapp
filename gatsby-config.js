@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Insert witty title here`,
+    title: `Ainar's Travels`,
     description: `Insert default general app description here with keywords for SEO. Shows up on default for every page where description is not specified explicitly.`,
     author: `Ainars Ciesa`,
-    keywords: `travel long-term-travel travel-on-budget blog travel blog`,
+    keywords: `travel,long-term-travel,travel-on-budget,blog,travel blog`,
     image: `image-figure-it-out`,
     url: `https://www.travelapp.com`,
   },
