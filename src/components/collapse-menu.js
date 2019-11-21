@@ -47,8 +47,11 @@ const CollapseMenu = ({ isExpanded, collapseNav }) => {
   useEffect(() => {
     const handler = () => isExpanded && collapseNav()
     window.addEventListener("resize", handler)
-
-    return () => window.removeEventListener("resize", handler)
+    window.addEventListener("scroll", handler)
+    return () => {
+      window.removeEventListener("resize", handler)
+      window.removeEventListener("scroll", handler)
+    }
   }, [isExpanded, collapseNav])
 
   if (isExpanded === true) {

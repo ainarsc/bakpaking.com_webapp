@@ -5,7 +5,7 @@ module.exports = {
     author: `Ainars Ciesa`,
     keywords: `travel,long-term-travel,travel-on-budget,blog,travel blog`,
     logo: `./src/images/gatsby-astronaut.png`,
-    siteUrl: `http://localhost:8000`,
+    siteUrl: `https://localhost:8000`,
     siteLanguage: `en`,
     ogLanguage: `en-US`,
     schemaHeadline: `No bs guide to travel`,
@@ -67,21 +67,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      // options: {
-      //   // CommonMark mode (default: true)
-      //   commonmark: true,
-      //   // Footnotes mode (default: true)
-      //   footnotes: true,
-      //   // Pedantic mode (default: true)
-      //   pedantic: true,
-      //   // GitHub Flavored Markdown mode (default: true)
-      //   gfm: true,
-      //   // Plugins configs
-      //   plugins: [],
-      // },
-    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
