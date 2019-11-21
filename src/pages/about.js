@@ -2,7 +2,7 @@ import React from "react"
 import Header from "../components/blog-header"
 import Article from "../components/elements/Article"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/seo/"
 import { graphql } from "gatsby"
 
 const About = ({ data }) => {

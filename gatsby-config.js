@@ -5,7 +5,7 @@ module.exports = {
     author: `Ainars Ciesa`,
     keywords: `travel,long-term-travel,travel-on-budget,blog,travel blog`,
     logo: `./src/images/gatsby-astronaut.png`,
-    url: `http://localhost:8000`,
+    siteUrl: `http://localhost:8000`,
     siteLanguage: `en`,
     ogLanguage: `en-US`,
     schemaHeadline: `No bs guide to travel`,
@@ -30,18 +30,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
     {
       resolve: `gatsby-plugin-react-redux`,
       options: {
@@ -93,6 +81,20 @@ module.exports = {
       //   // Plugins configs
       //   plugins: [],
       // },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "TravelApp",
+        short_name: "TravelApp",
+        start_url: "/",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        display: "standalone",
+        icon: "src/images/icon.png", // This path is relative to the root of the site.
+        crossOrigin: `use-credentials`,
+      },
     },
     // gatsby-config.js
     // this (optional) plugin enables Progressive Web App + Offline functionality

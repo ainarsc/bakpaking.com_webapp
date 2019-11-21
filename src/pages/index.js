@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
-import SEO from "../components/seo"
+import SEO from "../components/seo/"
 import FancyButton from "../components/elements/FancyButton"
 import bgSmall from "../images/bg-s.jpg"
 import bgMedium from "../images/bg-m.jpg"

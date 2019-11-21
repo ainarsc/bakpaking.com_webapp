@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import BlogCard from "../components/blog-card"
 import SearchBar from "../components/search-bar"
 import { H1 } from "../components/elements/H1"
-import SEO from "../components/seo"
+import SEO from "../components/seo/"
 
 //TODO:
 // Component that fetches post given certain tag or criteria
