@@ -21,7 +21,7 @@ const Container = styled.div`
     :hover {
       background: ${({ theme }) => theme.secondaryHover};
       transform: scale(1.02);
-      transition-delay: 0.2s;
+      transition-delay: 0.1s;
     }
   }
 `
@@ -55,6 +55,8 @@ const RightSide = styled.div`
   }
   @media only screen and (${({ theme }) => theme.tablet}) {
     text-align: left;
+    padding-top: 0;
+    padding-left: 1rem;
   }
 `
 
