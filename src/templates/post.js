@@ -18,7 +18,7 @@ const Post = ({ data }) => {
         desc={markdownRemark.excerpt}
         keywords={frontmatter.tags}
         article={true}
-        banner={frontmatter.featuredImg.childImageSharp.fluid.src}
+        image={frontmatter.featuredImg.childImageSharp.fluid.src}
       />
       <Layout>
         <Header
