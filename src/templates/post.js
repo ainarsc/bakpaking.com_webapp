@@ -17,6 +17,8 @@ const Post = ({ data }) => {
         pathname={postPath + frontmatter.path}
         desc={markdownRemark.excerpt}
         keywords={frontmatter.tags}
+        article={true}
+        banner={frontmatter.featuredImg.childImageSharp.fluid.src}
       />
       <Layout>
         <Header
@@ -46,6 +48,7 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(quality: 75) {
               ...GatsbyImageSharpFluid
+              src
             }
           }
         }
