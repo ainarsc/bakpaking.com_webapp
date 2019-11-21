@@ -1,6 +1,7 @@
 ---
 title: backpacking vietnam
 date: 2019-11-23
+tags: travel, foo, random, tags, budget
 path: /backpacking-vietnam
 featuredImg: tb9.jpg
 published: true

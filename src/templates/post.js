@@ -16,6 +16,7 @@ const Post = ({ data }) => {
         title={frontmatter.title}
         pathname={postPath + frontmatter.path}
         desc={markdownRemark.excerpt}
+        keywords={frontmatter.tags}
       />
       <Layout>
         <Header
@@ -40,6 +41,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
         featuredImg {
           childImageSharp {
             fluid(quality: 75) {

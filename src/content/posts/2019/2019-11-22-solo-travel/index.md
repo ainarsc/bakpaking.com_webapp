@@ -1,6 +1,7 @@
 ---
 title: Solo Travel
 date: 2019-11-22
+tags: travel, foo, random, tags, budget, travel, foo, random, tags, budget
 path: /solo-travel
 featuredImg: tb3.jpg
 published: true

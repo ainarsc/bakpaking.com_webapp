@@ -1,6 +1,7 @@
 ---
 title: long term travel
 date: 2019-11-23
+tags: travel, foo, random, tags, budget, travel, foo, random, tags, budget
 path: /long-term-travel
 featuredImg: tb2.jpg
 published: true
