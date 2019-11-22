@@ -10,6 +10,7 @@ const ImgContainer = styled.div`
   background: rgba(0, 0, 0, 0.5);
   margin-top: 0.8rem;
   max-width: 500px;
+  border-radius: 3px;
 `
 
 const Heading = styled.h1`

@@ -60,12 +60,13 @@ const Footer = () => {
       </Copyright>
       <Icons>
         <Svg small dataPath={mediaIcons.facebook.datapath} icon={"facebook"} />
+        <Svg small dataPath={mediaIcons.linkedin.datapath} icon={"linkedin"} />
+        <Svg small dataPath={mediaIcons.twitter.datapath} icon={"twitter"} />
         <Svg
           small
           dataPath={mediaIcons.instagram.datapath}
           icon={"instagram"}
         />
-        <Svg small dataPath={mediaIcons.linkedin.datapath} icon={"linkedin"} />
         <Svg small dataPath={mediaIcons.email.datapath} icon={"email"} />
       </Icons>
       <Developed>

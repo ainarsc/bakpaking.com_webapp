@@ -31,6 +31,7 @@ const LeftSide = styled.div`
   position: relative;
   align-self: center;
   overflow: hidden;
+  border-radius: 2px;
   background: ${({ theme }) => theme.primaryHover};
   @media only screen and (${({ theme }) => theme.mobileL}) {
     width: 80%;
