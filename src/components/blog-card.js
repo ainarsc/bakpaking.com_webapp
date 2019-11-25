@@ -15,12 +15,13 @@ const Container = styled.div`
   align-content: center;
   justify-content: center;
   transition: 300ms ease-in-out;
-
+  border: 1px solid rgba(169, 245, 237, 0);
   @media only screen and (${({ theme }) => theme.tablet}) {
     flex-direction: row;
     :hover {
       background: ${({ theme }) => theme.secondaryHover};
-      transform: scale(1.02);
+      border: 1px solid rgba(169, 245, 237, 0.5);
+      /* transform: scale(1.02); */
       transition-delay: 0.1s;
     }
   }
