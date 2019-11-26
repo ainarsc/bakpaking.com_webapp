@@ -5,7 +5,8 @@ module.exports = {
     author: `Ainars Ciesa`,
     keywords: `travel,long-term-travel,travel-on-budget,blog,travel blog`,
     logo: `./src/images/gatsby-astronaut.png`,
-    siteUrl: `https://localhost:8000`,
+    siteUrl: `${process.env.NODE_ENV === "development" &&
+      `https://localhost:8000`}`,
     siteLanguage: `en`,
     ogLanguage: `en-US`,
     schemaHeadline: `No bs guide to travel`,

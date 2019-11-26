@@ -5,15 +5,20 @@ import BlogCard from "../components/blog-card"
 import SearchBar from "../components/search-bar"
 import { H1 } from "../components/elements/H1"
 import SEO from "../components/seo/"
+import PageLinks from "../components/pageLinks"
 
-//TODO:
-// Component that fetches post given certain tag or criteria
-
-const Blog = ({ data }) => {
+const BlogPage = ({ data, pageContext }) => {
   let { allFile } = data
   let { edges } = allFile
-
-  const blogURL = "/blog"
+  const { numPages, currentPage } = pageContext
+  const blogURL = pageContext.pathName
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage =
+    currentPage - 1 === 1
+      ? blogURL
+      : blogURL + "/" + (currentPage - 1).toString()
+  const nextPage = blogURL + "/" + (currentPage + 1).toString()
 
   return (
     <>
@@ -33,15 +38,24 @@ const Blog = ({ data }) => {
             }
           />
         ))}
+        <PageLinks
+          isFirst={isFirst}
+          isLast={isLast}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
       </Layout>
     </>
   )
 }
 
 export const query = graphql`
-  query {
+  query($skip: Int!, $limit: Int!) {
     allFile(
+      sort: { fields: childMarkdownRemark___frontmatter___date }
       filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "md" } }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
@@ -68,29 +82,4 @@ export const query = graphql`
   }
 `
 
-// export const query = graphql`
-//   query {
-//     allMarkdownRemark {
-//       edges {
-//         node {
-//           id
-//           frontmatter {
-//             path
-//             title
-//             date(formatString: "DD MMMM, YYYY")
-//             featuredImg {
-//               childImageSharp {
-//                 fluid {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//           }
-//           excerpt(pruneLength: 300)
-//         }
-//       }
-//     }
-//   }
-// `
-
-export default Blog
+export default BlogPage
