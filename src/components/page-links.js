@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { arrowLeft, arrowRight } from "../assets/Icons"
+import Svg from "./elements/Svg"
 
 const Links = styled.div`
   margin-top: 1rem;
@@ -11,12 +13,12 @@ const PageLinks = ({ isFirst, isLast, prevPage, nextPage }) => {
     <Links>
       {!isFirst && (
         <Link to={prevPage} rel="prev">
-          ← Previous Page
+          <Svg small dataPath={arrowLeft.datapath} icon={"angle-left"} />
         </Link>
       )}
       {!isLast && (
         <Link to={nextPage} rel="next">
-          Next Page →
+          <Svg small dataPath={arrowRight.datapath} icon={"angle-right"} />
         </Link>
       )}
     </Links>

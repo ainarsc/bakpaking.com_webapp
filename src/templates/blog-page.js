@@ -5,7 +5,7 @@ import BlogCard from "../components/blog-card"
 import SearchBar from "../components/search-bar"
 import { H1 } from "../components/elements/H1"
 import SEO from "../components/seo/"
-import PageLinks from "../components/pageLinks"
+import PageLinks from "../components/page-links"
 
 const BlogPage = ({ data, pageContext }) => {
   let { allFile } = data
