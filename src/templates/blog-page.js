@@ -43,6 +43,8 @@ const BlogPage = ({ data, pageContext }) => {
           isLast={isLast}
           prevPage={prevPage}
           nextPage={nextPage}
+          currentPage={currentPage}
+          numPages={numPages}
         />
       </Layout>
     </>

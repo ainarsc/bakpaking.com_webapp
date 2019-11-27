@@ -105,7 +105,7 @@ const NavBar = ({ collapseNav, isExpanded }) => {
         <MenuIcon />
         <NavLinks>
           <li>
-            <Link activeClassName="is-active" to="/blog">
+            <Link activeClassName="is-active" to="/blog" partiallyActive={true}>
               Blog
             </Link>
           </li>
