@@ -1,12 +1,12 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
-setTimeout(() => {
-  console.log("[gatsby-node]: Running in " + process.env.NODE_ENV)
-}, 5000)
+// setTimeout(() => {
+//   console.log("[gatsby-node]: Running in " + process.env.NODE_ENV)
+// }, 5000)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
