@@ -8,7 +8,7 @@ import PropTypes from "prop-types"
 
 // const CollapseWrapper = styled(animated.div)`
 const CollapseWrapper = styled.div`
-  background: ${({ theme }) => theme.secondaryLight};
+  background: rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 3.5rem;
   left: 0;

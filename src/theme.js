@@ -10,7 +10,7 @@ const size = {
 }
 
 const theme = {
-  primaryDark: "rgb(25, 25, 25)",
+  primaryDark: "rgb(28, 28, 28)",
   primaryLight: "#F7F7F9",
   primaryHover: "rgba(0, 0, 0, 0.5)",
   secondaryHover: "#242424",

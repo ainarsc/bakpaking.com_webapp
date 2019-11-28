@@ -45,7 +45,7 @@ const InputFields = styled.div`
 const InputBar = styled.input`
   margin: 5px 0;
   padding: 3px;
-  background: rgb(33, 33, 33);
+  background: rgb(35, 35, 35);
   border: none;
   border-radius: 3px;
   font-weight: lighter;
@@ -64,7 +64,7 @@ const InputBar = styled.input`
 const Dropdown = styled.select`
   margin: 5px 0;
   height: 2rem;
-  background: rgb(33, 33, 33);
+  background: rgb(35, 35, 35);
   border: none;
   border-radius: 2px;
   font-weight: lighter;
@@ -87,7 +87,7 @@ const Button = styled.div`
   padding: 0 3px;
   margin-bottom: 5px;
   cursor: pointer;
-  background: rgb(30, 30, 30);
+  background: rgb(35, 35, 35);
   border-radius: 4px;
 
   svg {

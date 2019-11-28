@@ -23,7 +23,7 @@ const Container = styled.div`
       border: 1px solid rgba(169, 245, 237, 0.4);
 
       /* transform: scale(1.02); */
-      transition-delay: 0.1s;
+      /* transition-delay: 0.1s; */
     }
   }
 `
