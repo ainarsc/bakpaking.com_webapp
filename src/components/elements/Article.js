@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 const Article = styled.article`
   width: 90%;
-  max-width: 800px;
-  margin: 2rem auto 0;
+  max-width: 750px;
+  margin: 2rem auto 2rem;
   text-align: left;
   line-height: 1.5rem;
   @media only screen and (${({ theme }) => theme.mobileL}) {

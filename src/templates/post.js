@@ -4,6 +4,8 @@ import Article from "../components/elements/Article"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BackButton from "../components/elements/BackButton"
+import FancyLine from "../components/elements/FancyLine"
 
 const Post = ({ data }) => {
   let { markdownRemark } = data
@@ -29,6 +31,8 @@ const Post = ({ data }) => {
           {frontmatter.title}
         </Header>
         <Article dangerouslySetInnerHTML={{ __html: html }} />
+        <FancyLine />
+        <BackButton />
       </Layout>
     </>
   )
