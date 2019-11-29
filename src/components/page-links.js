@@ -44,7 +44,6 @@ const PageLinks = ({
     <Container>
       {!isFirst && (
         <Link to={prevPage} rel="prev">
-          {/* <Svg small dataPath={arrowLeft.datapath} icon={"angle-left"} /> */}
           &#60;&#60;
         </Link>
       )}
@@ -53,7 +52,7 @@ const PageLinks = ({
         <li key={`pgnr${i + 1}`}>
           <StyledLink
             to={`/blog/${i === 0 ? "" : i + 1}`}
-            current={i + 1 === currentPage ? "#242424" : ""}
+            current={i + 1 === currentPage ? "rgb(40, 40, 40)" : ""}
           >
             {i + 1}
           </StyledLink>
@@ -62,7 +61,6 @@ const PageLinks = ({
 
       {!isLast && (
         <Link to={nextPage} rel="next">
-          {/* <Svg small dataPath={arrowRight.datapath} icon={"angle-right"} /> */}
           &#62;&#62;
         </Link>
       )}

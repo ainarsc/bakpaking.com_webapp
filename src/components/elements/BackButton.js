@@ -1,27 +1,36 @@
 import React from "react"
 import styled from "styled-components"
+import Svg from "./Svg"
+import { arrowLeft } from "../../assets/Icons"
 
 const Container = styled.button`
   margin-top: 1.2rem;
   display: flex;
-  font-size: 1.3rem;
-  width: 4rem;
   padding: 5px;
-  color: ${({ theme }) => theme.secondaryLighter};
   border: none;
   border-radius: 2px;
-  text-justify: center;
-  background-color: #242424;
+  background-color: ${({ theme }) => theme.secondaryDark};
   justify-content: center;
   cursor: pointer;
-  :hover {
-    color: #14a76c;
-    transition: 0.25s;
+  :focus {
+    outline: 0;
+  }
+  svg {
+    fill: ${({ theme }) => theme.secondaryLighter};
   }
 `
 
 const BackButton = () => {
-  return <Container onClick={() => window.history.back()}>&#11152;</Container>
+  return (
+    <Container onClick={() => window.history.back()}>
+      <Svg
+        small
+        data-icon={"arrow-left"}
+        dataPath={arrowLeft.datapath}
+        icon={"email"}
+      />
+    </Container>
+  )
 }
 
 export default BackButton
