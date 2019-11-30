@@ -30,6 +30,7 @@ const Container = styled.ul`
 `
 const StyledLink = styled(Link)`
   background-color: ${({ current }) => current};
+  border-radius: 2px;
 `
 
 const PageLinks = ({

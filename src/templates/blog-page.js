@@ -6,7 +6,8 @@ import SearchBar from "../components/search-bar"
 import { H1 } from "../components/elements/H1"
 import SEO from "../components/seo/"
 import PageLinks from "../components/page-links"
-import Tag from "../components/tag"
+import Tag from "../components/elements/tag"
+import TagContainer from "../components/tag-container"
 
 const BlogPage = ({ data, pageContext }) => {
   let { blogs } = data
@@ -27,10 +28,12 @@ const BlogPage = ({ data, pageContext }) => {
     <>
       <SEO title="Blog | Ainar's Travels" pathname={blogURL} />
       <Layout>
-        <SearchBar />
-        {tags.group.map(tag => (
-          <Tag tagName={tag.fieldValue} postCount={tag.totalCount} />
-        ))}
+        <TagContainer>
+          {tags.group.map(tag => (
+            <Tag tagName={tag.fieldValue} />
+          ))}
+        </TagContainer>
+
         <H1>LATEST BLOG POSTS</H1>
         {edges.map(({ node }) => (
           <BlogCard
@@ -62,7 +65,6 @@ export const query = graphql`
     tags: allMarkdownRemark {
       group(field: frontmatter___tagsArr) {
         fieldValue
-        totalCount
       }
     }
     blogs: allFile(

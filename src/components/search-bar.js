@@ -111,13 +111,13 @@ const SearchBar = () => {
   return (
     <Container>
       <Button open={open} onClick={() => setOpen(!open)}>
-        <Svg small dataPath={Icons.search.datapath} icon={"email"} />
+        <Svg small dataPath={Icons.search.datapath} icon={"search"} />
         <Svg small dataPath={Icons.arrowUp.datapath} icon={"arrow"} />
       </Button>
       <SearchIcon>
-        <Svg small dataPath={Icons.search.datapath} icon={"email"} />
+        <Svg small dataPath={Icons.search.datapath} icon={"search"} />
       </SearchIcon>
-      <InputFields open={open}>
+      <InputFields>
         <InputBar placeholder="Search" />
         <Dropdown>
           <option value="All Topics">All Topics</option>

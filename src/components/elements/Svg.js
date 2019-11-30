@@ -6,11 +6,11 @@ const SvgWrapper = styled.svg.attrs(props => ({
   width: props.small ? "2.5rem" : "3.5rem",
 }))`
   fill: ${({ theme }) => theme.primaryLight};
-  transition: fill 0.25s;
+  /* transition: fill 0.25s; */
   padding: 3px;
-  :hover {
+  /* :hover {
     fill: #14a76c;
-  }
+  } */
 `
 
 const Svg = props => {

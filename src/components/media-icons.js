@@ -14,6 +14,11 @@ const Container = styled.div`
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
+
+    svg:hover {
+      fill: #14a76c;
+      transition: ease-in-out 0.3s;
+    }
   }
 `
 
