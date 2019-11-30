@@ -4,17 +4,18 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
-// setTimeout(() => {
-//   console.log("[gatsby-node]: Running in " + process.env.NODE_ENV)
-// }, 5000)
-
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   try {
     const result = await graphql(`
       query {
-        allFile(
+        tags: allMarkdownRemark {
+          group(field: frontmatter___tagsArr) {
+            fieldValue
+          }
+        }
+        posts: allFile(
           filter: {
             sourceInstanceName: { eq: "posts" }
             extension: { eq: "md" }
@@ -33,8 +34,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     `)
 
-    // CREATE BLOG POSTS
-    const { edges } = result.data.allFile
+    // CREATE BLOG PAGES
+    const { edges } = result.data.posts
+    const { tags } = result.data
     const postsPerPage = 10
     const numPages = Math.ceil(edges.length / postsPerPage)
 
@@ -59,6 +61,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         path: `/blog${postPath}`,
         component: path.resolve(`./src/templates/post.js`),
         context: { postPath: postPath },
+      })
+    })
+
+    // CREATE TAG POST PAGES
+    tags.group.forEach(tag => {
+      const tagName = tag.fieldValue
+      createPage({
+        path: `/blog/categories/${tagName.toLowerCase()}`,
+        component: path.resolve(`./src/templates/tag-posts.js`),
+        context: { postPath: tagName },
       })
     })
   } catch (err) {

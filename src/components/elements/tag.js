@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 const Container = styled.div`
   padding: 5px 7px;
@@ -17,11 +18,13 @@ const Container = styled.div`
   }
 `
 
-const Tag = ({ tagName }) => {
+const Tag = ({ tagName, tagLink }) => {
   return (
-    <Container>
-      <h3>{tagName}</h3>
-    </Container>
+    <Link to={tagLink}>
+      <Container>
+        <h3>{tagName}</h3>
+      </Container>
+    </Link>
   )
 }
 

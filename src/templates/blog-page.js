@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BlogCard from "../components/blog-card"
-import SearchBar from "../components/search-bar"
 import { H1 } from "../components/elements/H1"
 import SEO from "../components/seo/"
 import PageLinks from "../components/page-links"
@@ -22,7 +21,8 @@ const BlogPage = ({ data, pageContext }) => {
       ? blogURL
       : blogURL + "/" + (currentPage - 1).toString()
   const nextPage = blogURL + "/" + (currentPage + 1).toString()
-  // const tags = node.childMarkdownRemark.frontmatter.tagsArr
+
+  const tagLink = blogURL + "/categories/"
 
   return (
     <>
@@ -30,7 +30,10 @@ const BlogPage = ({ data, pageContext }) => {
       <Layout>
         <TagContainer>
           {tags.group.map(tag => (
-            <Tag tagName={tag.fieldValue} />
+            <Tag
+              tagName={tag.fieldValue}
+              tagLink={`${tagLink}${tag.fieldValue.toLowerCase()}`}
+            />
           ))}
         </TagContainer>
 

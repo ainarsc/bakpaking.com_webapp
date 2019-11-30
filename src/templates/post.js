@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackButton from "../components/elements/BackButton"
-import FancyLine from "../components/elements/FancyLine"
 
 const Post = ({ data }) => {
   let { markdownRemark } = data
