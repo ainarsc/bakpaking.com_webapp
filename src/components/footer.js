@@ -37,6 +37,10 @@ const Icons = styled.div`
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
+  svg:hover {
+    transition: ease-in-out 0.2s;
+    fill: #14a76c;
+  }
   @media only screen and (${({ theme }) => theme.tablet}) {
     width: 40%;
   }

@@ -10,7 +10,7 @@ const Dropdown = styled.div`
   justify-content: space-between;
   width: 70%;
   min-width: 250px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   border-bottom: 1px solid ${({ theme }) => theme.secondaryLight};
   height: 2rem;
   cursor: pointer;
@@ -35,15 +35,13 @@ const Container = styled.div`
   display: ${({ open }) => (open ? "flex" : "none")};
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 1rem 2.5rem;
+  margin: -1rem 1rem 2.5rem;
   min-width: 200px;
   max-width: 700px;
   align-items: center;
+  justify-content: center;
 `
-const Heading = styled.h2`
-  text-align: center;
-  font-size: 1.2rem;
-`
+
 const TagContainer = ({ children }) => {
   const [open, setOpen] = useState(false)
 

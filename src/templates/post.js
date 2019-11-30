@@ -31,7 +31,6 @@ const Post = ({ data }) => {
           {frontmatter.title}
         </Header>
         <Article dangerouslySetInnerHTML={{ __html: html }} />
-        <FancyLine />
         <BackButton />
       </Layout>
     </>

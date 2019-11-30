@@ -7,8 +7,13 @@ const Container = styled.div`
   text-align: center;
   background-color: ${({ theme }) => theme.secondaryDark};
   border-radius: 2px;
+  cursor: pointer;
   h3 {
     color: ${({ theme }) => theme.secondaryLighter};
+    :hover {
+      color: #14a76c;
+      transition: ease-in-out 0.3s;
+    }
   }
 `
 
