@@ -3,6 +3,7 @@ title: Some Amazing Post Title
 date: 2019-11-20
 tags: travel, foo, random, tags, budget
 path: /some-amazing-post-title-ai
+tagsArr: ["budget", "new zealand", "save"]
 featuredImg: blog-img.jpg
 published: true
 ---

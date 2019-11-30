@@ -6,10 +6,12 @@ import SearchBar from "../components/search-bar"
 import { H1 } from "../components/elements/H1"
 import SEO from "../components/seo/"
 import PageLinks from "../components/page-links"
+import Tag from "../components/tag"
 
 const BlogPage = ({ data, pageContext }) => {
-  let { allFile } = data
-  let { edges } = allFile
+  let { blogs } = data
+  let { tags } = data
+  let { edges } = blogs
   const { numPages, currentPage } = pageContext
   const blogURL = pageContext.pathName
   const isFirst = currentPage === 1
@@ -19,12 +21,16 @@ const BlogPage = ({ data, pageContext }) => {
       ? blogURL
       : blogURL + "/" + (currentPage - 1).toString()
   const nextPage = blogURL + "/" + (currentPage + 1).toString()
+  // const tags = node.childMarkdownRemark.frontmatter.tagsArr
 
   return (
     <>
       <SEO title="Blog | Ainar's Travels" pathname={blogURL} />
       <Layout>
         <SearchBar />
+        {tags.group.map(tag => (
+          <Tag tagName={tag.fieldValue} postCount={tag.totalCount} />
+        ))}
         <H1>LATEST BLOG POSTS</H1>
         {edges.map(({ node }) => (
           <BlogCard
@@ -53,7 +59,13 @@ const BlogPage = ({ data, pageContext }) => {
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
-    allFile(
+    tags: allMarkdownRemark {
+      group(field: frontmatter___tagsArr) {
+        fieldValue
+        totalCount
+      }
+    }
+    blogs: allFile(
       sort: { fields: childMarkdownRemark___frontmatter___date }
       filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "md" } }
       limit: $limit
