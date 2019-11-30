@@ -10,10 +10,10 @@ const Container = styled.div`
   cursor: pointer;
   h3 {
     color: ${({ theme }) => theme.secondaryLighter};
-    :hover {
-      color: #14a76c;
-      transition: ease-in-out 0.3s;
-    }
+  }
+  :hover h3 {
+    color: #14a76c;
+    transition: ease-in-out 0.3s;
   }
 `
 
