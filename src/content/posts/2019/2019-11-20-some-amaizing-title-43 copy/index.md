@@ -3,7 +3,7 @@ title: Some Amazing Post Title
 date: 2019-11-23
 tags: travel, foo, random, tags, budget, travel, foo, random, tags, budget
 tagsArr: ["How-To"]
-path: /some-amazing-post-title-afsa
+path: /some-amazing-post-title-15
 featuredImg: blog-img.jpg
 published: true
 ---

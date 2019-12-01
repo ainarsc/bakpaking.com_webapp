@@ -70,7 +70,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       createPage({
         path: `/blog/categories/${tagName.toLowerCase()}`,
         component: path.resolve(`./src/templates/tag-posts.js`),
-        context: { postPath: tagName },
+        context: {
+          tag: tagName,
+          limit: postsPerPage,
+          skip: 0,
+          numPages,
+          currentPage: 0 + 1,
+          pathName: `/blog`,
+        },
       })
     })
   } catch (err) {

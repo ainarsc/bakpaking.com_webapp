@@ -3,7 +3,7 @@ title: Some Amazing Post Title
 date: 2019-11-23
 tags: travel, foo, random, tags, budget
 tagsArr: ["Hikes", "Asia"]
-path: /some-amazing-post-title-af
+path: /some-amazing-post-title-21
 featuredImg: blog-img.jpg
 published: true
 ---

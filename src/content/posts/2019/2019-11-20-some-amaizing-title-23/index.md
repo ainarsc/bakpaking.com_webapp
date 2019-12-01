@@ -3,7 +3,7 @@ title: Some Amazing Post Title
 date: 2019-11-23
 tags: travel, foo, random, tags, budget
 tagsArr: ["Backpacking light"]
-path: /some-amazing-post-title-agg
+path: /some-amazing-post-title-11
 featuredImg: blog-img.jpg
 published: true
 ---

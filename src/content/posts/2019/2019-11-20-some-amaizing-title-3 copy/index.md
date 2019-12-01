@@ -3,7 +3,7 @@ title: Some Amazing Post Title
 date: 2019-11-22
 tags: travel, foo, random, tags, budget, travel, foo, random, tags, budget
 tagsArr: ["Top Thing To Do", "Asia"]
-path: /some-amazing-post-title-aw
+path: /some-amazing-post-title-6
 featuredImg: blog-img.jpg
 published: true
 ---

@@ -3,7 +3,7 @@ title: Some Amazing Post Title
 date: 2019-11-20
 tags: travel, foo, random, tags, budget
 tagsArr: ["Budget", "Vietnam", "Motorbike"]
-path: /some-amazing-post-title-ai
+path: /some-amazing-post-title-2
 featuredImg: blog-img.jpg
 published: true
 ---
