@@ -51,7 +51,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           skip: i * postsPerPage,
           numPages,
           currentPage: i + 1,
-          pathName: `/blog`,
         },
       })
     })
@@ -78,7 +77,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           skip: 0,
           numPages,
           currentPage: 0 + 1,
-          pathName: `/blog`,
         },
       })
     })

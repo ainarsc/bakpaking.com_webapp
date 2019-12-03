@@ -10,7 +10,7 @@ const TagPosts = ({ data, pageContext }) => {
   const { blogs } = data
   const { tag } = pageContext
   const { numPages, currentPage } = pageContext
-  const blogURL = pageContext.pathName
+  const blogURL = "/blog"
 
   return (
     <>
