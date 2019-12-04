@@ -2,7 +2,7 @@
 title: Some Amazing Post Title
 date: 2019-11-22
 tags: travel, foo, random, tags, budget, travel, foo, random, tags, budget
-tagsArr: ["Planning", "Australia", "Top Things To Do"]
+tagsArr: ["Planning", "Australia", "Transportation", "Budget", "Save"]
 path: /some-amazing-post-title-5
 featuredImg: blog-img.jpg
 published: true

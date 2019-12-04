@@ -2,7 +2,7 @@
 title: Some Amazing Post Title
 date: 2019-11-23
 tags: travel, foo, random, tags, budget
-tagsArr: ["India"]
+tagsArr: ["India", "Save"]
 path: /some-amazing-post-title-24
 featuredImg: blog-img.jpg
 published: true

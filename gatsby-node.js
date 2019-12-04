@@ -8,6 +8,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const blogListing = path.resolve("./src/templates/blog-page.js")
   const postPage = path.resolve(`./src/templates/post.js`)
+  const BLOG = "/blog"
 
   try {
     const result = await graphql(`
@@ -15,6 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         tags: allMarkdownRemark {
           group(field: frontmatter___tagsArr) {
             fieldValue
+            totalCount
           }
         }
         posts: allFile(
@@ -51,6 +53,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           skip: i * postsPerPage,
           numPages,
           currentPage: i + 1,
+          blogLink: BLOG,
         },
       })
     })
@@ -66,8 +69,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
 
     // CREATE TAG POST PAGES
+    let numTagPages
+    //TODO, skip
     tags.group.forEach(tag => {
       const tagName = tag.fieldValue
+      numTagPages = Math.ceil(tag.totalCount / postsPerPage) //Round Up
+
       createPage({
         path: `/blog/categories/${tagName.toLowerCase()}`,
         component: path.resolve(`./src/templates/tag-posts.js`),
@@ -75,8 +82,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           tag: tagName,
           limit: postsPerPage,
           skip: 0,
-          numPages,
-          currentPage: 0 + 1,
+          numPages: numTagPages,
+          currentPage: i + 1,
+          blogLink: BLOG,
         },
       })
     })

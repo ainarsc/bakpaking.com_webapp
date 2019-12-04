@@ -8,20 +8,14 @@ import { PageHeading } from "../components/elements/PageHeading"
 
 const BlogPage = ({ data, pageContext }) => {
   const { blogs } = data
-  const { numPages, currentPage } = pageContext
-  const blogURL = "/blog"
 
   return (
     <>
-      <SEO title="Blog | Ainar's Travels" pathname={blogURL} />
+      <SEO title="Blog | Ainar's Travels" pathname={pageContext.blogLink} />
       <Layout>
         <TagListing />
         <PageHeading>{"Latest From Blog"}</PageHeading>
-        <PostListing
-          postEdges={blogs.edges}
-          numPages={numPages}
-          currentPage={currentPage}
-        />
+        <PostListing postEdges={blogs.edges} pagination={pageContext} />
       </Layout>
     </>
   )

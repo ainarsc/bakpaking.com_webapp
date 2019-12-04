@@ -33,14 +33,19 @@ const StyledLink = styled(Link)`
   border-radius: 2px;
 `
 
-const PageLinks = ({
-  isFirst,
-  isLast,
-  prevPage,
-  nextPage,
-  currentPage,
-  numPages,
-}) => {
+const PageLinks = ({ pagination }) => {
+  const { currentPage, numPages, blogLink } = pagination
+
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+
+  const prevPage =
+    currentPage - 1 === 1
+      ? blogLink
+      : `${blogLink}/${(currentPage - 1).toString()}`
+
+  const nextPage = `${blogLink}/${(currentPage + 1).toString()}`
+
   return (
     <Container>
       {!isFirst && (

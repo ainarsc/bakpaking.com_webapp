@@ -8,21 +8,14 @@ import { PageHeading } from "../components/elements/PageHeading"
 
 const TagPosts = ({ data, pageContext }) => {
   const { blogs } = data
-  const { tag } = pageContext
-  const { numPages, currentPage } = pageContext
-  const blogURL = "/blog"
 
   return (
     <>
-      <SEO title="Blog | Ainar's Travels" pathname={blogURL} />
+      <SEO title="Blog | Ainar's Travels" pathname={pageContext.blogLink} />
       <Layout>
         <TagListing />
-        <PageHeading>{tag.toUpperCase()}</PageHeading>
-        <PostListing
-          postEdges={blogs.edges}
-          numPages={numPages}
-          currentPage={currentPage}
-        />
+        <PageHeading>{pageContext.tag.toUpperCase()}</PageHeading>
+        <PostListing postEdges={blogs.edges} pagination={pageContext} />
       </Layout>
     </>
   )
