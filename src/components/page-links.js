@@ -57,7 +57,7 @@ const PageLinks = ({ pagination }) => {
       {Array.from({ length: numPages }, (_, i) => (
         <li key={`pgnr${i + 1}`}>
           <StyledLink
-            to={`/blog/${i === 0 ? "" : i + 1}`}
+            to={`${blogLink}${i === 0 ? "" : "/" + (i + 1)}`}
             current={i + 1 === currentPage ? "rgb(40, 40, 40)" : ""}
           >
             {i + 1}

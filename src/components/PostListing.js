@@ -10,12 +10,12 @@ const PostListing = ({ postEdges, pagination }) => {
           key={node.id}
           title={node.frontmatter.title}
           intro={node.excerpt}
-          link={pagination.blogLink + node.frontmatter.path}
+          link={"/blog" + node.frontmatter.path}
           thumbnail={node.frontmatter.featuredImg.childImageSharp.fluid}
         />
       ))}
-      <PageLinks pagination={pagination} />
-      {/* {!pagination.numPages < 2 &&} */}
+
+      {pagination.numPages > 1 && <PageLinks pagination={pagination} />}
     </>
   )
 }

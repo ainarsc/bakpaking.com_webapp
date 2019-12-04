@@ -70,23 +70,38 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     // CREATE TAG POST PAGES
     let numTagPages
-    //TODO, skip
-    tags.group.forEach(tag => {
-      const tagName = tag.fieldValue
-      numTagPages = Math.ceil(tag.totalCount / postsPerPage) //Round Up
 
-      createPage({
-        path: `/blog/categories/${tagName.toLowerCase()}`,
-        component: path.resolve(`./src/templates/tag-posts.js`),
-        context: {
-          tag: tagName,
-          limit: postsPerPage,
-          skip: 0,
-          numPages: numTagPages,
-          currentPage: i + 1,
-          blogLink: BLOG,
-        },
-      })
+    //
+    //path: `/blog/categories/${tagName.toLowerCase()}${
+    // numTagPages > 1 ? "/" + currPage : "" }`
+
+    tags.group.forEach(tag => {
+      // Tag name
+      const tagName = tag.fieldValue
+      // Number of pages for the tag rounded up
+      numTagPages = Math.ceil(tag.totalCount / postsPerPage)
+      // Tag page url
+      let tagUrl = `/blog/categories/${tagName.toLowerCase()}`
+
+      for (i = 0; i < numTagPages; i++) {
+        const currPage = i + 1
+        if (numTagPages > 1 && i > 0) {
+          tagUrl = tagUrl + `/${currPage}`
+        }
+
+        createPage({
+          path: tagUrl,
+          component: path.resolve(`./src/templates/tag-posts.js`),
+          context: {
+            tag: tagName,
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages: numTagPages,
+            currentPage: currPage,
+            blogLink: `${BLOG}/categories/${tagName.toLowerCase()}`,
+          },
+        })
+      }
     })
   } catch (err) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
