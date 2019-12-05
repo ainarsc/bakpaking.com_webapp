@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
 const ImgContainer = styled.div`
-  width: 100%;
+  width: 95%;
   max-height: 400px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
