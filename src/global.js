@@ -16,6 +16,9 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     background-color: ${({ theme }) => theme.primaryDark};
   }
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
 `
 
 export default GlobalStyles
