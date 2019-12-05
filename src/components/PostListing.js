@@ -1,6 +1,6 @@
 import React from "react"
-import BlogCard from "../components/blog-card"
-import PageLinks from "../components/page-links"
+import BlogCard from "../components/BlogCard"
+import PageLinks from "../components/PageLinks"
 
 const PostListing = ({ postEdges, pagination }) => {
   return (

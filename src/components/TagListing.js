@@ -1,6 +1,6 @@
 import React from "react"
-import Tag from "./elements/tag"
-import TagContainer from "./tag-container"
+import Tag from "./elements/Tag"
+import TagContainer from "./TagContainer"
 import { useStaticQuery, graphql } from "gatsby"
 import { Location } from "@reach/router"
 

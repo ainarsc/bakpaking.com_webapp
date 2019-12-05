@@ -7,7 +7,6 @@ const Article = styled.article`
   text-align: left;
   line-height: 1.5rem;
   @media only screen and (${({ theme }) => theme.mobileL}) {
-    width: 100%;
     line-height: 1.8rem;
   }
   @media only screen and (${({ theme }) => theme.tablet}) {

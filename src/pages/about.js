@@ -1,7 +1,7 @@
 import React from "react"
-import Header from "../components/blog-header"
+import Header from "../components/Header"
 import Article from "../components/elements/Article"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo/"
 import { graphql } from "gatsby"
 

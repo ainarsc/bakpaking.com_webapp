@@ -5,11 +5,9 @@ import FancyButton from "../components/elements/FancyButton"
 import bgSmall from "../images/bg-s.jpg"
 import bgMedium from "../images/bg-m.jpg"
 import bgLarge from "../images/bg-l.jpg"
-import bgXL from "../images/bg-xl.jpg"
-import bg4k from "../images/bg-xxl.jpg"
 import GlobalStyles from "../global"
 
-const sizes = { bgSmall, bgMedium, bgLarge, bgXL, bg4k }
+const sizes = { bgSmall, bgMedium, bgLarge }
 
 const BackgroundImage = styled.div`
   height: 100vh;

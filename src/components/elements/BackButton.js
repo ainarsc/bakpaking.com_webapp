@@ -38,4 +38,5 @@ const BackButton = ({ fn }) => {
   )
 }
 BackButton.defaultProps = { fn: null }
+
 export default BackButton

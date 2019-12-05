@@ -1,12 +1,11 @@
 import React from "react"
 import GlobalStyles from "../global"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
-import NavBar from "./navbar"
-import Footer from "./footer"
-import Main from "./main"
-import Backdrop from "./backdrop"
-import MediaIcons from "./media-icons"
+import NavBar from "./NavBar"
+import Footer from "./Footer"
+import Main from "./Main"
+import Backdrop from "./Backdrop"
+import MediaIcons from "./MediaIcons"
 
 const Layout = ({ children }) => {
   return (

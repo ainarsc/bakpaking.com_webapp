@@ -1,8 +1,8 @@
 import React from "react"
-import Header from "../components/blog-header"
+import Header from "../components/Header"
 import Article from "../components/elements/Article"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import StickyBackButton from "../components/elements/StickyBackButton"
 

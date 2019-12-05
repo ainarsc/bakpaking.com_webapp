@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-//TODO: Render button "as" link
-
 const Button = styled.button`
   padding: 20px 30px;
   font-size: 30px;
