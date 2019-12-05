@@ -6,18 +6,23 @@ import { Icons } from "../assets/Icons"
 //TODO: Replace icon datapath with imported icons
 const Container = styled.div`
   display: none;
-  @media only screen and (${({ theme }) => theme.laptopS}) {
+  @media only screen and (${({ theme }) => theme.mobileL}) {
     display: inline;
     position: fixed;
     top: 40vh;
     left: 5px;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
     cursor: pointer;
 
     svg:hover {
       fill: #14a76c;
       transition: ease-in-out 0.3s;
+    }
+    @media only screen and (${({ theme }) => theme.laptopS}) {
+      svg {
+        height: 3rem;
+        width: 3.5rem;
+      }
     }
   }
 `

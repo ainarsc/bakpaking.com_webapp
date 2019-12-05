@@ -1,19 +1,24 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo/"
 import PostListing from "../components/PostListing"
 import TagListing from "../components/TagListing"
 import { PageHeading } from "../components/elements/PageHeading"
+import StickyBackButton from "../components/elements/StickyBackButton"
 
 const TagPosts = ({ data, pageContext }) => {
   const { blogs } = data
-
   return (
     <>
       <SEO title="Blog | Ainar's Travels" pathname={pageContext.blogLink} />
       <Layout>
+        <Link to="/blog">
+          <StickyBackButton />
+        </Link>
+
         <TagListing />
+
         <PageHeading>{pageContext.tag.toUpperCase()}</PageHeading>
         <PostListing postEdges={blogs.edges} pagination={pageContext} />
       </Layout>

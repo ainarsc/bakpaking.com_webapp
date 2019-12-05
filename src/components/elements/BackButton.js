@@ -4,13 +4,13 @@ import Svg from "./Svg"
 import { arrowLeft } from "../../assets/Icons"
 
 const Container = styled.button`
-  margin-top: 0.8rem;
+  margin: 0.8rem 0;
   display: flex;
-  padding: 5px;
-  width: 4.5rem;
+  padding: 3px;
+  width: 3rem;
   border: none;
   border-radius: 2px;
-  background-color: ${({ theme }) => theme.secondaryDark};
+  background-color: ${({ theme }) => theme.primaryDark};
   justify-content: center;
   cursor: pointer;
   :focus {
@@ -22,13 +22,12 @@ const Container = styled.button`
   }
   svg {
     fill: ${({ theme }) => theme.secondaryLighter};
-    height: 1.5rem;
   }
 `
 
-const BackButton = () => {
+const BackButton = ({ fn }) => {
   return (
-    <Container onClick={() => window.history.back()}>
+    <Container onClick={fn}>
       <Svg
         small
         data-icon={"arrow-left"}
@@ -38,5 +37,5 @@ const BackButton = () => {
     </Container>
   )
 }
-
+BackButton.defaultProps = { fn: null }
 export default BackButton

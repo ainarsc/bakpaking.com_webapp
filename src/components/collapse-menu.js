@@ -8,7 +8,7 @@ import PropTypes from "prop-types"
 
 // const CollapseWrapper = styled(animated.div)`
 const CollapseWrapper = styled.div`
-  background: rgba(169, 245, 237, 0.3);
+  background: rgba(230, 230, 230, 0.3);
   position: fixed;
   top: 3.5rem;
   left: 0;
@@ -27,9 +27,11 @@ const NavLinks = styled.ul`
 
   & a {
     font-size: 1.5rem;
+    padding: 3px 5px;
     font-style: bold;
     line-height: 2.5;
     color: ${({ theme }) => theme.primaryLight};
+    background: rgba(30, 30, 30, 0.5);
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
@@ -37,7 +39,7 @@ const NavLinks = styled.ul`
     &:hover,
     &.is-active {
       color: ${({ theme }) => theme.primaryLight};
-      border-bottom: 1px solid ${({ theme }) => theme.primaryLight};
+      border-bottom: 3px solid rgba(169, 245, 237, 0.75);
     }
   }
 `

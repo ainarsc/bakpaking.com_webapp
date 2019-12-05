@@ -4,7 +4,7 @@ import Article from "../components/elements/Article"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BackButton from "../components/elements/BackButton"
+import StickyBackButton from "../components/elements/StickyBackButton"
 
 const Post = ({ data }) => {
   let { markdownRemark } = data
@@ -30,7 +30,7 @@ const Post = ({ data }) => {
           {frontmatter.title}
         </Header>
         <Article dangerouslySetInnerHTML={{ __html: html }} />
-        <BackButton />
+        <StickyBackButton fn={() => window.history.back()} />
       </Layout>
     </>
   )

@@ -2,15 +2,11 @@ import React from "react"
 import styled from "styled-components"
 
 const SvgWrapper = styled.svg.attrs(props => ({
-  height: props.small ? "2rem" : "3rem",
-  width: props.small ? "2.5rem" : "3.5rem",
+  height: props.small ? "2rem" : "2.5rem",
+  width: props.small ? "2.5rem" : "3rem",
 }))`
   fill: ${({ theme }) => theme.primaryLight};
-  /* transition: fill 0.25s; */
   padding: 3px;
-  /* :hover {
-    fill: #14a76c;
-  } */
 `
 
 const Svg = props => {

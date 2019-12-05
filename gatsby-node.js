@@ -69,17 +69,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
 
     // CREATE TAG POST PAGES
-    let numTagPages
-
-    //
-    //path: `/blog/categories/${tagName.toLowerCase()}${
-    // numTagPages > 1 ? "/" + currPage : "" }`
 
     tags.group.forEach(tag => {
       // Tag name
       const tagName = tag.fieldValue
       // Number of pages for the tag rounded up
-      numTagPages = Math.ceil(tag.totalCount / postsPerPage)
+      const numTagPages = Math.ceil(tag.totalCount / postsPerPage)
       // Tag page url
       let tagUrl = `/blog/categories/${tagName.toLowerCase()}`
 
