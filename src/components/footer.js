@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import PropTypes from "prop-types"
 import Svg from "./elements/Svg"
 import { facebook, linkedin, twitter, instagram, email } from "../assets/Icons"
 
@@ -74,10 +73,6 @@ const Footer = () => {
       </Developed>
     </Container>
   )
-}
-
-Footer.propTypes = {
-  location: PropTypes.string,
 }
 
 export default Footer

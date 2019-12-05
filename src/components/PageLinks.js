@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
 const Container = styled.ul`
   padding: 0;
@@ -72,6 +73,14 @@ const PageLinks = ({ pagination }) => {
       )}
     </Container>
   )
+}
+
+PageLinks.propTypes = {
+  pagination: PropTypes.shape({
+    currentPage: PropTypes.number,
+    numPages: PropTypes.number,
+    blogLink: PropTypes.string,
+  }),
 }
 
 export default PageLinks

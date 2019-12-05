@@ -1,6 +1,7 @@
 import React from "react"
 import BlogCard from "../components/BlogCard"
 import PageLinks from "../components/PageLinks"
+import PropTypes from "prop-types"
 
 const PostListing = ({ postEdges, pagination }) => {
   return (
@@ -18,6 +19,25 @@ const PostListing = ({ postEdges, pagination }) => {
       {pagination.numPages > 1 && <PageLinks pagination={pagination} />}
     </>
   )
+}
+
+PostListing.propTypes = {
+  pagination: PropTypes.shape({
+    currentPage: PropTypes.number,
+    numPages: PropTypes.number,
+    blogLink: PropTypes.string,
+  }),
+  postEdges: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      excerpt: PropTypes.string,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string,
+        path: PropTypes.string,
+        featuredImg: PropTypes.string,
+      }),
+    })
+  ),
 }
 
 export default PostListing

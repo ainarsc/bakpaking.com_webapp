@@ -49,6 +49,7 @@ const Header = ({ isTrue, imagePath, date, children }) => {
 Header.propTypes = {
   isTrue: PropTypes.bool,
   imagePath: PropTypes.object,
+  date: PropTypes.string,
 }
 
 export default Header
