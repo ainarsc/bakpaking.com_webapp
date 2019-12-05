@@ -9,16 +9,16 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryLight};
     margin: 0;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
   }
   
   html, body {
     margin: 0;
     padding: 0;
     background-color: ${({ theme }) => theme.primaryDark};
+    
   }
-  a {
-    -webkit-tap-highlight-color: transparent;
-  }
+ 
 `
 
 export default GlobalStyles
