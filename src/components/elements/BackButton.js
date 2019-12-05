@@ -10,7 +10,7 @@ const Container = styled.button`
   width: 3rem;
   border: none;
   border-radius: 2px;
-  background-color: ${({ theme }) => theme.primaryDark};
+  background-color: ${({ theme }) => theme.secondaryDark};
   justify-content: center;
   cursor: pointer;
   :focus {

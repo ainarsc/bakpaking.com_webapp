@@ -9,7 +9,7 @@ const Container = styled.div`
     display: inline;
     position: fixed;
     bottom: 3rem;
-    left: 5px;
+    left: 0;
   }
 `
 
