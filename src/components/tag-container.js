@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Icons } from "../assets/Icons"
+import { search, arrowUp } from "../assets/Icons"
 import Svg from "./elements/Svg"
 
 const Dropdown = styled.div`
@@ -48,8 +48,8 @@ const TagContainer = ({ children }) => {
   return (
     <>
       <Dropdown open={open} onClick={() => setOpen(!open)}>
-        <Svg small dataPath={Icons.search.datapath} icon={"search"} />
-        <Svg small dataPath={Icons.arrowUp.datapath} icon={"arrow"} />
+        <Svg small dataPath={search.datapath} icon={"search"} />
+        <Svg small dataPath={arrowUp.datapath} icon={"arrow"} />
       </Dropdown>
       <Container open={open}>{children}</Container>
     </>

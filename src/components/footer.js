@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import Svg from "./elements/Svg"
-import { Icons as mediaIcons } from "../assets/Icons"
+import { facebook, linkedin, twitter, instagram, email } from "../assets/Icons"
 
 const Container = styled.footer`
   padding: 0.5rem;
@@ -63,15 +63,11 @@ const Footer = () => {
         <span>© {new Date().getFullYear()}</span>
       </Copyright>
       <Icons>
-        <Svg small dataPath={mediaIcons.facebook.datapath} icon={"facebook"} />
-        <Svg small dataPath={mediaIcons.linkedin.datapath} icon={"linkedin"} />
-        <Svg small dataPath={mediaIcons.twitter.datapath} icon={"twitter"} />
-        <Svg
-          small
-          dataPath={mediaIcons.instagram.datapath}
-          icon={"instagram"}
-        />
-        <Svg small dataPath={mediaIcons.email.datapath} icon={"email"} />
+        <Svg small dataPath={facebook.datapath} icon={"facebook"} />
+        <Svg small dataPath={linkedin.datapath} icon={"linkedin"} />
+        <Svg small dataPath={twitter.datapath} icon={"twitter"} />
+        <Svg small dataPath={instagram.datapath} icon={"instagram"} />
+        <Svg small dataPath={email.datapath} icon={"email"} />
       </Icons>
       <Developed>
         <p>Developed by Ainars Ciesa</p>

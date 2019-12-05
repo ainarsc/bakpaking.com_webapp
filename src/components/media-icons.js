@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import Svg from "./elements/Svg"
-import { Icons } from "../assets/Icons"
+import { facebook, linkedin, twitter } from "../assets/Icons"
 
-//TODO: Replace icon datapath with imported icons
 const Container = styled.div`
   display: none;
   @media only screen and (${({ theme }) => theme.mobileL}) {
@@ -30,9 +29,9 @@ const Container = styled.div`
 const MediaIcons = () => {
   return (
     <Container>
-      <Svg dataPath={Icons.facebook.datapath} icon={"facebook"} />
-      <Svg dataPath={Icons.twitter.datapath} icon={"twitter"} />
-      <Svg dataPath={Icons.linkedin.datapath} icon={"linkedin"} />
+      <Svg dataPath={facebook.datapath} icon={"facebook"} />
+      <Svg dataPath={twitter.datapath} icon={"twitter"} />
+      <Svg dataPath={linkedin.datapath} icon={"linkedin"} />
     </Container>
   )
 }
