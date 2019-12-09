@@ -5,12 +5,13 @@ const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
-  const blogListing = path.resolve("./src/templates/blog-page.js")
-  const postPage = path.resolve(`./src/templates/post.js`)
-  const BLOG = "/blog"
-
   try {
+    const { createPage } = actions
+    const blogListing = path.resolve("./src/templates/blog-page.js")
+    const postPage = path.resolve(`./src/templates/post.js`)
+    const tagPosts = path.resolve(`./src/templates/tag-posts.js`)
+    const BLOG = "/blog"
+
     const result = await graphql(`
       query {
         tags: allMarkdownRemark {
@@ -47,7 +48,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-        component: path.resolve("./src/templates/blog-page.js"),
+        component: blogListing,
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
@@ -63,7 +64,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       const postPath = node.childMarkdownRemark.frontmatter.path
       createPage({
         path: `/blog${postPath}`,
-        component: path.resolve(`./src/templates/post.js`),
+        component: postPage,
         context: { postPath: postPath },
       })
     })
@@ -86,7 +87,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
         createPage({
           path: tagUrl,
-          component: path.resolve(`./src/templates/tag-posts.js`),
+          component: tagPosts,
           context: {
             tag: tagName,
             limit: postsPerPage,
