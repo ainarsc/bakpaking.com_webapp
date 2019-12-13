@@ -81,7 +81,7 @@ const IndexPage = () => {
 
       <Container>
         <Highlight>
-          <Title>No BS guide to travel</Title>
+          <Title>/|\ bakpaking</Title>
           <Line />
           <FancyButton path="/blog">Enter</FancyButton>
         </Highlight>

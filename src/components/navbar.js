@@ -99,7 +99,7 @@ const NavBar = ({ collapseNav, isExpanded }) => {
       <Container>
         <Logo>
           <Link onClick={() => isExpanded && collapseNav()} to="/">
-            Ainar's Travels
+            bakpaking
           </Link>
         </Logo>
         <MenuIcon />

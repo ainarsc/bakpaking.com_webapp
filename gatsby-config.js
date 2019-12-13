@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Ainar's Travels`,
-    description: `Insert default general app description here with keywords for SEO. Shows up on default for every page where description is not specified explicitly.`,
+    title: `Bakpaking`,
+    description: `Bakpaking is a place to read all about long term backpacking on a budget with no BS or sugarcoating, just straight to the point honest opinions and genuine experiences by Ainars Ciesa`,
     author: `Ainars Ciesa`,
     keywords: `travel,long-term-travel,travel-on-budget,blog,travel blog`,
-    logo: `./src/images/gatsby-astronaut.png`,
+    logo: `./src/images/icon.png`,
     siteUrl: `https://localhost:8000`,
     siteLanguage: `en`,
     ogLanguage: `en-US`,
-    schemaHeadline: `No bs guide to travel`,
+    schemaHeadline: `All about long term backpacking on a budget`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/content/posts`,
+        path: `${__dirname}/src/content/posts/2019`,
       },
     },
     {
@@ -72,11 +72,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "TravelApp",
-        short_name: "TravelApp",
+        name: "bakpaking.io",
+        short_name: "bakpaking.io",
         start_url: "/",
-        background_color: "#6b37bf",
-        theme_color: "#6b37bf",
+        background_color: "#14a76c",
+        theme_color: "#14a76c",
         display: "standalone",
         icon: "src/images/icon.png", // This path is relative to the root of the site.
         crossOrigin: `use-credentials`,
