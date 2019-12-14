@@ -19,7 +19,7 @@ const TagListing = () => {
     <Location>
       {({ location }) => (
         <TagContainer>
-          {location.pathname !== "/blog" && (
+          {location.pathname.includes("categories") && (
             <Tag tagName="All Posts" tagLink="/blog" special />
           )}
           {data.tags.group.map((tag, i) => (

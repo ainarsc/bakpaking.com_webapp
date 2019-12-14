@@ -12,6 +12,7 @@ const Container = styled.div`
   cursor: pointer;
   h3 {
     color: ${({ theme }) => theme.secondaryLighter};
+    font-weight: 400;
   }
   :hover h3 {
     color: #14a76c;

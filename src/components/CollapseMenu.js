@@ -84,9 +84,9 @@ const CollapseMenu = ({ isExpanded, collapseNav }) => {
             <Link
               onClick={() => collapseNav()}
               activeClassName="is-active"
-              to="/travel-tips"
+              to="/guides"
             >
-              Travel Tips
+              Guides
             </Link>
           </li>
           <li>

@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { LargeText } from "../components/elements/LargeText"
-import SEO from "../components/seo/"
+import SEO from "../components/seo"
 
-const Tips = () => {
+const Guides = () => {
   return (
     <Layout>
       <SEO title="Travel Guides" />
@@ -14,4 +14,4 @@ const Tips = () => {
   )
 }
 
-export default Tips
+export default Guides
