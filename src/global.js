@@ -3,8 +3,9 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyles = createGlobalStyle`
     *{
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'raleway', sans-serif; 
     font-size: 16px;
+    font-weight: 300;
     letter-spacing: 1px;
     color: ${({ theme }) => theme.primaryLight};
     margin: 0;

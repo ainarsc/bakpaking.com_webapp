@@ -6,6 +6,7 @@ import bgSmall from "../images/bg-s.jpg"
 import bgMedium from "../images/bg-m.jpg"
 import bgLarge from "../images/bg-l.jpg"
 import GlobalStyles from "../global"
+import logo from "../images/icon.png"
 
 const sizes = { bgSmall, bgMedium, bgLarge }
 
@@ -17,13 +18,6 @@ const BackgroundImage = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   filter: blur(3px);
-
-  /* 
-    background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1), url()
-  */
 
   @media only screen and (${({ theme }) => theme.tabletS}) {
     background-image: url(${props => props.size.bgMedium});
@@ -45,31 +39,63 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
-`
-
-const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #f2f2f2;
-  text-align: center;
-  font-weight: lighter;
-  padding: 1.5rem;
+  color: ${({ theme }) => theme.primaryLight};
+  a {
+    align-self: center;
+  }
 `
 
 const Highlight = styled.div`
-  width: 100%;
   background: rgba(0, 0, 0, 0.4);
+  padding: 0 1rem;
   border-radius: 5px;
   justify-content: center;
   @media only screen and (${({ theme }) => theme.mobileL}) {
     width: auto;
+    padding: 0 2rem;
+  }
+`
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  h1 {
+    align-self: center;
   }
 `
 
+const Headline = styled.h1`
+  font-family: "amatic sc";
+  font-size: 3rem;
+  color: #f2f2f2;
+  text-align: center;
+  font-weight: lighter;
+
+  @media only screen and (${({ theme }) => theme.tabletS}) {
+    font-size: 4.5rem;
+  }
+  @media only screen and (${({ theme }) => theme.laptopS}) {
+    font-size: 5.5rem;
+  }
+`
+
+const Img = styled.img`
+  max-width: 70px;
+  max-height: 70px;
+  padding: 0.5rem;
+
+  @media only screen and (${({ theme }) => theme.tablet}) {
+    max-width: 100px;
+    max-height: 100px;
+  }
+`
 const Line = styled.div`
   height: 1px;
-  background: #f2f2f2;
-  width: 60%;
+  width: 70%;
   margin: auto;
+  background: #f2f2f2;
 `
 
 const IndexPage = () => {
@@ -78,10 +104,13 @@ const IndexPage = () => {
       <GlobalStyles />
       <SEO />
       <BackgroundImage size={sizes} />
-
       <Container>
         <Highlight>
-          <Title>/|\ bakpaking</Title>
+          <Row>
+            <Img src={logo} />
+            <Headline>bakpaking.io</Headline>
+          </Row>
+
           <Line />
           <FancyButton path="/blog">Enter</FancyButton>
         </Highlight>

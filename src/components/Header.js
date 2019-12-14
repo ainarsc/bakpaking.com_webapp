@@ -19,7 +19,7 @@ const Heading = styled.h1`
   background: rgba(50, 50, 50, 0.5);
   padding: 3px 20px;
   text-align: center;
-  font-weight: lighter;
+  font-weight: 400;
   @media only screen and (${({ theme }) => theme.tabletS}) {
     font-size: 2rem;
   }

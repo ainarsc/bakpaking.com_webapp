@@ -7,8 +7,8 @@ import CollapseMenu from "./CollapseMenu"
 import { useOnClickOutside } from "../hooks"
 import { collapseNav } from "../state/actions/uiActions"
 import PropTypes from "prop-types"
+import logo from "../images/icon.png"
 
-/////// Nav Bar styling ////////
 const Container = styled.div`
   position: fixed;
   height: 3.5rem;
@@ -28,28 +28,38 @@ const Container = styled.div`
     justify-content: center;
   }
 `
-
+const Brand = styled.div`
+  width: 50%;
+`
 const Logo = styled.div`
-  padding-left: 1rem;
-  a {
-    font-size: 1.2rem;
-    padding: 0 0.4rem;
-    border: 3px double ${({ theme }) => theme.primaryLight};
-    color: ${({ theme }) => theme.primaryLight};
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2rem;
+  h1 {
+    display: none;
+    font-family: "amatic sc";
+    padding: 0 0.5rem;
+    margin-top: -0.5rem;
     :hover {
       background: none;
     }
-    @media only screen and (${({ theme }) => theme.mobileM}) {
-      font-size: 1.5rem;
+    @media only screen and (${({ theme }) => theme.tabletS}) {
+      display: inherit;
+      font-size: 3.5rem;
     }
   }
 
   @media only screen and (${({ theme }) => theme.tablet}) {
-    width: 50%;
     padding-left: 3rem;
   }
 `
+const Img = styled.img`
+  width: 3.3rem;
+  height: 3.3rem;
+`
 
+/// MENU LINKS ///
 const NavLinks = styled.ul`
   display: none;
   height: 100%;
@@ -57,7 +67,7 @@ const NavLinks = styled.ul`
     padding: 1rem 0.5rem;
     text-decoration: none;
     font-size: 1.4rem;
-    font-weight: lighter;
+    font-weight: 400;
     :hover,
     &.is-active {
       background: ${({ theme }) => theme.primaryHover};
@@ -76,16 +86,6 @@ const NavLinks = styled.ul`
   }
 `
 
-// Default styling
-const theme = {
-  main: "gray",
-  secondaryDark: "black",
-  primaryHover: "rgba(0, 0, 0, 0.5)",
-  tablet: `min-width: 768px`,
-}
-Container.defaultProps = { theme }
-Logo.defaultProps = { theme }
-
 const NavBar = ({ collapseNav, isExpanded }) => {
   const node = useRef()
 
@@ -97,11 +97,15 @@ const NavBar = ({ collapseNav, isExpanded }) => {
   return (
     <div ref={node}>
       <Container>
-        <Logo>
+        <Brand>
           <Link onClick={() => isExpanded && collapseNav()} to="/">
-            bakpaking
+            <Logo>
+              <Img src={logo} />
+              <h1>bakpaking.io</h1>
+            </Logo>
           </Link>
-        </Logo>
+        </Brand>
+
         <MenuIcon />
         <NavLinks>
           <li>

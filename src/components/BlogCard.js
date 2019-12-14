@@ -51,11 +51,10 @@ const RightSide = styled.div`
   text-align: center;
   h1 {
     font-size: 1.2rem;
+    font-weight: 400;
     text-transform: uppercase;
   }
-  p {
-    font-weight: lighter;
-  }
+
   @media only screen and (${({ theme }) => theme.tablet}) {
     text-align: left;
     padding-top: 0;
