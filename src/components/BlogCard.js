@@ -30,6 +30,7 @@ const Container = styled.div`
 
 const LeftSide = styled.div`
   width: 100%;
+  /* For images */
   position: relative;
   align-self: center;
   overflow: hidden;
@@ -50,6 +51,7 @@ const RightSide = styled.div`
   line-height: 1.5rem;
   text-align: center;
   h1 {
+    padding-bottom: 0.5rem;
     font-size: 1.2rem;
     font-weight: 400;
     text-transform: uppercase;
