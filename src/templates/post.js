@@ -48,7 +48,7 @@ export const pageQuery = graphql`
         tags
         featuredImg {
           childImageSharp {
-            fluid(quality: 75) {
+            fluid(maxWidth: 500, quality: 50) {
               ...GatsbyImageSharpFluid
               src
             }
