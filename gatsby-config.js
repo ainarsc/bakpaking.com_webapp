@@ -75,9 +75,8 @@ module.exports = {
         name: "Bakpaking",
         short_name: "Bakpaking",
         start_url: "/",
-        background_color:
-          "linear-gradient(to right, #2bad41, #14a76c, #2bad41)",
-        theme_color: "linear-gradient(to right, #2bad41, #14a76c, #2bad41)",
+        background_color: "#14a76c",
+        theme_color: "#14a76c",
         display: "standalone",
         icon: "src/images/icon.png", // This path is relative to the root of the site.
         crossOrigin: `use-credentials`,

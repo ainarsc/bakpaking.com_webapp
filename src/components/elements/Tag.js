@@ -7,7 +7,7 @@ const Container = styled.div`
   margin: 3px;
   text-align: center;
   background-color: ${props =>
-    props.special ? "rgba(169, 245, 237, 0.20)" : props.theme.secondaryDark};
+    props.special ? "#454545" : props.theme.secondaryDark};
   border-radius: 2px;
   cursor: pointer;
   h3 {

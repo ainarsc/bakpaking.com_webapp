@@ -16,8 +16,8 @@ const theme = {
   secondaryHover: "#242424",
   main: "linear-gradient(to right, #2bad41, #14a76c, #2bad41)",
   secondaryDark: "rgb(40, 40, 40)",
-  secondaryLight: "rgba(230, 230, 230, 0.3)",
-  secondaryLighter: "rgba(230, 230, 230, 0.5)",
+  secondaryLight: "rgba(230, 230, 230, 0.4)",
+  secondaryLighter: "rgba(230, 230, 230, 0.8)",
   footerMain: "linear-gradient(to right, #262626, #383838, #262626)",
 
   mobileS: `min-width: ${size.mobileS}`,

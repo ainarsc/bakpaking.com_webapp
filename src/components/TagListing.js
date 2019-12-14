@@ -25,7 +25,7 @@ const TagListing = () => {
           {data.tags.group.map((tag, i) => (
             <Tag
               key={`tag-nr-${i}`}
-              tagName={tag.fieldValue}
+              tagName={tag.fieldValue.toLowerCase().replace(/-/g, " ")}
               tagLink={`${tagLink}${tag.fieldValue.toLowerCase()}`}
             />
           ))}
