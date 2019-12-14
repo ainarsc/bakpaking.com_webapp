@@ -68,11 +68,14 @@ const Row = styled.div`
 
 const Headline = styled.h1`
   font-family: "amatic sc";
-  font-size: 3rem;
+  font-size: 2rem;
   color: #f2f2f2;
   text-align: center;
   font-weight: lighter;
 
+  @media only screen and (${({ theme }) => theme.mobileS}) {
+    font-size: 3rem;
+  }
   @media only screen and (${({ theme }) => theme.tabletS}) {
     font-size: 4.5rem;
   }
@@ -82,11 +85,15 @@ const Headline = styled.h1`
 `
 
 const Img = styled.img`
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 50px;
+  max-height: 50px;
   padding: 0.5rem;
 
-  @media only screen and (${({ theme }) => theme.tablet}) {
+  @media only screen and (${({ theme }) => theme.mobileS}) {
+    max-width: 70px;
+    max-height: 70px;
+  }
+  @media only screen and (${({ theme }) => theme.tabletS}) {
     max-width: 100px;
     max-height: 100px;
   }

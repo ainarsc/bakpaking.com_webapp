@@ -30,11 +30,14 @@ const Container = styled.div`
 `
 const Brand = styled.div`
   width: 50%;
+  height: 100%;
 `
+
 const Logo = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: inline-block;
+  position: relative;
+  /* flex-direction: row;
+  align-items: flex-start; */
   padding-left: 2rem;
   h1 {
     display: none;
@@ -46,7 +49,8 @@ const Logo = styled.div`
     }
     @media only screen and (${({ theme }) => theme.tabletS}) {
       display: inherit;
-      font-size: 3.5rem;
+      position: absolute;
+      font-size: 3.3rem;
     }
   }
 
@@ -55,8 +59,8 @@ const Logo = styled.div`
   }
 `
 const Img = styled.img`
-  width: 3.3rem;
-  height: 3.3rem;
+  width: 3.5rem;
+  height: 3.5rem;
 `
 
 /// MENU LINKS ///

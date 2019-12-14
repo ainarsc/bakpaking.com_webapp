@@ -23,11 +23,12 @@ const NavLinks = styled.ul`
   text-align: center;
   & li {
     transition: all 300ms linear 0s;
+    padding: 8px 0;
   }
 
   & a {
-    font-size: 1.5rem;
-    padding: 3px 5px;
+    font-size: 1.8rem;
+    padding: 5px;
     font-style: bold;
     line-height: 2.5;
     color: ${({ theme }) => theme.primaryLight};
