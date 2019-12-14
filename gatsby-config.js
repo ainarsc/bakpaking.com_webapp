@@ -72,11 +72,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "bakpaking.io",
-        short_name: "bakpaking.io",
+        name: "Bakpaking",
+        short_name: "Bakpaking",
         start_url: "/",
-        background_color: "#14a76c",
-        theme_color: "#14a76c",
+        background_color:
+          "linear-gradient(to right, #2bad41, #14a76c, #2bad41)",
+        theme_color: "linear-gradient(to right, #2bad41, #14a76c, #2bad41)",
         display: "standalone",
         icon: "src/images/icon.png", // This path is relative to the root of the site.
         crossOrigin: `use-credentials`,
