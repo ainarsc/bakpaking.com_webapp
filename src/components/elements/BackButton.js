@@ -13,6 +13,7 @@ const Container = styled.button`
   background-color: ${({ theme }) => theme.secondaryDark};
   justify-content: center;
   cursor: pointer;
+
   :focus {
     outline: 0;
   }
@@ -20,6 +21,7 @@ const Container = styled.button`
     transition: ease-in-out 0.2s;
     fill: #14a76c;
   }
+
   svg {
     fill: ${({ theme }) => theme.secondaryLighter};
   }

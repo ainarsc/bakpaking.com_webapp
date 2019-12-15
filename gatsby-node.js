@@ -96,7 +96,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       // Number of pages for the tag rounded up
       const numTagPages = Math.ceil(tag.totalCount / postsPerPage)
       // Tag page url
-      let tagUrl = `/blog/categories/${tagName.toLowerCase()}`
+      let tagUrl = `/blog/categories/${tagName
+        .toLowerCase()
+        .replace(/ /g, "-")}`
 
       for (i = 0; i < numTagPages; i++) {
         const currPage = i + 1
@@ -113,7 +115,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             skip: i * postsPerPage,
             numPages: numTagPages,
             currentPage: currPage,
-            blogLink: `${BLOG}/categories/${tagName.toLowerCase()}`,
+            blogLink: tagUrl,
+            // blogLink: `${BLOG}/categories/${tagName
+            //   .toLowerCase()
+            //   .replace(/ /g, "-")}`,
           },
         })
       }

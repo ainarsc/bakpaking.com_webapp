@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Button = styled.button`
-  padding: 10px 20px;
+  padding: 8px 18px;
   font-size: 30px;
   cursor: pointer;
   position: relative;
@@ -13,8 +13,14 @@ const Button = styled.button`
   background-color: transparent;
   margin: 1.5rem;
   white-space: nowrap;
-  @media only screen and (${({ theme }) => theme.tablet}) {
+  font-size: 1.2rem;
+  @media only screen and (${({ theme }) => theme.mobileS}) {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
+  @media only screen and (${({ theme }) => theme.tabletS}) {
     padding: 20px 30px;
+    font-size: 1.8rem;
   }
   &::after,
   &::before,

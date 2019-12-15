@@ -8,6 +8,7 @@ import { useOnClickOutside } from "../hooks"
 import { collapseNav } from "../state/actions/uiActions"
 import PropTypes from "prop-types"
 import logo from "../images/icon.png"
+import title from "../images/title.png"
 
 const Container = styled.div`
   position: fixed;
@@ -39,7 +40,7 @@ const Logo = styled.div`
   /* flex-direction: row;
   align-items: flex-start; */
   padding-left: 2rem;
-  h1 {
+  /* h1 {
     display: none;
     font-family: "amatic sc";
     padding: 0 0.5rem;
@@ -52,15 +53,15 @@ const Logo = styled.div`
       position: absolute;
       font-size: 3.3rem;
     }
-  }
+  } */
 
   @media only screen and (${({ theme }) => theme.tablet}) {
     padding-left: 3rem;
   }
 `
 const Img = styled.img`
-  width: 3.5rem;
   height: 3.5rem;
+  padding-right: 5px;
 `
 
 /// MENU LINKS ///
@@ -105,7 +106,7 @@ const NavBar = ({ collapseNav, isExpanded }) => {
           <Link onClick={() => isExpanded && collapseNav()} to="/">
             <Logo>
               <Img src={logo} />
-              <h1>bakpaking.io</h1>
+              <Img src={title} />
             </Logo>
           </Link>
         </Brand>

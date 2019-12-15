@@ -7,6 +7,7 @@ import bgMedium from "../images/bg-m.jpg"
 import bgLarge from "../images/bg-l.jpg"
 import GlobalStyles from "../global"
 import logo from "../images/icon.png"
+import title from "../images/title.png"
 
 const sizes = { bgSmall, bgMedium, bgLarge }
 
@@ -47,11 +48,12 @@ const Container = styled.section`
 
 const Highlight = styled.div`
   background: rgba(0, 0, 0, 0.4);
-  padding: 0 1rem;
-  border-radius: 5px;
+  width: 100%;
   justify-content: center;
+
   @media only screen and (${({ theme }) => theme.mobileL}) {
     width: auto;
+    border-radius: 5px;
     padding: 0 2rem;
   }
 `
@@ -66,8 +68,18 @@ const Row = styled.div`
   }
 `
 
-const Headline = styled.h1`
-  font-family: "amatic sc";
+const Headline = styled.img`
+  max-height: 50px;
+  padding: 0.5rem;
+
+  @media only screen and (${({ theme }) => theme.mobileS}) {
+    max-height: 70px;
+  }
+  @media only screen and (${({ theme }) => theme.tabletS}) {
+    max-height: 100px;
+  }
+
+  /* font-family: "amatic sc";
   font-size: 2rem;
   color: #f2f2f2;
   text-align: center;
@@ -81,12 +93,12 @@ const Headline = styled.h1`
   }
   @media only screen and (${({ theme }) => theme.laptopS}) {
     font-size: 5.5rem;
-  }
+  } */
 `
 
-const Img = styled.img`
-  max-width: 50px;
+const Icon = styled.img`
   max-height: 50px;
+  max-width: 50px;
   padding: 0.5rem;
 
   @media only screen and (${({ theme }) => theme.mobileS}) {
@@ -114,8 +126,8 @@ const IndexPage = () => {
       <Container>
         <Highlight>
           <Row>
-            <Img src={logo} />
-            <Headline>bakpaking.io</Headline>
+            <Icon src={logo} />
+            <Headline src={title} />
           </Row>
 
           <Line />
