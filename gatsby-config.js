@@ -3,12 +3,13 @@ module.exports = {
     title: `Bakpaking`,
     description: `Bakpaking is a place to read all about long term backpacking on a budget with no BS or sugarcoating, just straight to the point honest opinions and genuine experiences by Ainars Ciesa`,
     author: `Ainars Ciesa`,
-    keywords: `travel,long-term-travel,travel-on-budget,blog,travel blog`,
+    keywords: `backpacking, long term travel, backpacking on a budget, travel blog, backpacker, nomad`,
     logo: `./src/images/icon.png`,
-    siteUrl: `https://localhost:8000`,
+    siteUrl: `https://cranky-minsky-3ed2f3.netlify.com`,
     siteLanguage: `en`,
     ogLanguage: `en-US`,
     schemaHeadline: `All about long term backpacking on a budget`,
+    blogPostPrefix: `/blog`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,21 +46,6 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Raleway`,
-    //         subsets: [`latin`],
-    //       },
-    //       {
-    //         family: `Open Sans`,
-    //         variants: [`400`, `700`],
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

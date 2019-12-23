@@ -11,7 +11,7 @@ const BlogPage = ({ data, pageContext }) => {
 
   return (
     <>
-      <SEO title="Blog | Ainar's Travels" pathname={pageContext.blogLink} />
+      <SEO title="Blog | Bakpaking" pathname={pageContext.blogPrefix} />
       <Layout>
         <TagListing />
         <PageHeading>{"Latest From Blog"}</PageHeading>

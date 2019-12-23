@@ -1,7 +1,7 @@
 ---
 title: Some Amazing Post Title
 date: 2019-11-20
-tags: travel, foo, random, tags, budget
+keywords: Some Amazing Post Title, another keyword, and another one
 path: /some-amazing-post-title-1
 tagsArr: ["Budget", "New Zealand", "Japan", "Save"]
 featuredImg: blog-img.jpg
