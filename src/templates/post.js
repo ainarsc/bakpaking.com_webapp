@@ -9,22 +9,22 @@ import StickyBackButton from "../components/elements/StickyBackButton"
 const Post = ({ data }) => {
   let { markdownRemark } = data
   let { frontmatter, html } = markdownRemark
-  const postPath = "/blog"
+  const { blogPostPrefix, logo } = data.site.siteMetadata
 
   return (
     <>
       <SEO
         title={frontmatter.title}
-        pathname={postPath + frontmatter.path}
+        pathname={blogPostPrefix + frontmatter.path}
         desc={markdownRemark.excerpt}
-        keywords={frontmatter.tags}
+        keywords={frontmatter.keywords}
         article={true}
-        image={frontmatter.featuredImg.childImageSharp.fluid.src}
+        image={logo}
       />
       <Layout>
         <Header
           imagePath={frontmatter.featuredImg.childImageSharp.fluid}
-          isTrue={true}
+          isPost={true}
           date={frontmatter.date}
         >
           {frontmatter.title}
@@ -38,6 +38,12 @@ const Post = ({ data }) => {
 
 export const pageQuery = graphql`
   query($postPath: String!) {
+    site {
+      siteMetadata {
+        blogPostPrefix
+        logo
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $postPath } }) {
       html
       excerpt(pruneLength: 200)
@@ -45,7 +51,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        tags
+        keywords
         featuredImg {
           childImageSharp {
             fluid(maxWidth: 500, quality: 50) {

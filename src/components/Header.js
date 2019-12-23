@@ -34,11 +34,11 @@ const SubHeading = styled.h2`
   }
 `
 
-const Header = ({ isTrue, imagePath, date, children }) => {
+const Header = ({ isPost, imagePath, date, children }) => {
   return (
     <Fragment>
       <Heading>{children}</Heading>
-      {isTrue ? <SubHeading>{date} by Ainars Ciesa</SubHeading> : null}
+      {isPost ? <SubHeading>{date} by Ainars Ciesa</SubHeading> : null}
       <ImgContainer>
         <Img fluid={imagePath} />
       </ImgContainer>
