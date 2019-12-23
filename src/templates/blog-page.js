@@ -8,13 +8,14 @@ import { PageHeading } from "../components/elements/PageHeading"
 
 const BlogPage = ({ data, pageContext }) => {
   const { blogs } = data
+  const { title, blogPostPrefix } = data.site.siteMetadata
 
   return (
     <>
-      <SEO title="Blog | Bakpaking" pathname={pageContext.blogPrefix} />
+      <SEO title={`Blog | ${title}`} pathname={blogPostPrefix} />
       <Layout>
         <TagListing />
-        <PageHeading>{"Latest From Blog"}</PageHeading>
+        <PageHeading>{"All Posts"}</PageHeading>
         <PostListing postEdges={blogs.edges} pagination={pageContext} />
       </Layout>
     </>
@@ -23,6 +24,12 @@ const BlogPage = ({ data, pageContext }) => {
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+        blogPostPrefix
+      }
+    }
     blogs: allMarkdownRemark(
       sort: { fields: frontmatter___date }
       filter: { fileAbsolutePath: { regex: "/content/posts/" } }

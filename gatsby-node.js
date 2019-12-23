@@ -72,7 +72,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           skip: i * postsPerPage,
           numPages,
           currentPage: i + 1,
-          blogPrefix: blogPostPrefix,
+          prefix: blogPostPrefix,
         },
       })
     })
@@ -91,12 +91,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     tags.group.forEach(tag => {
       // Tag name
       const tagName = tag.fieldValue
+      const tagNameDashed = tagName.replace(/ /g, "-")
       // Number of pages for the tag rounded up
       const numTagPages = Math.ceil(tag.totalCount / postsPerPage)
       // Tag page url
-      let tagUrl = `${blogPostPrefix}/categories/${tagName
-        .toLowerCase()
-        .replace(/ /g, "-")}`
+      let tagUrl = `${blogPostPrefix}/categories/${tagNameDashed}`
 
       for (i = 0; i < numTagPages; i++) {
         const currPage = i + 1
@@ -113,10 +112,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             skip: i * postsPerPage,
             numPages: numTagPages,
             currentPage: currPage,
-            blogLink: tagUrl,
-            // blogLink: `${BLOG}/categories/${tagName
-            //   .toLowerCase()
-            //   .replace(/ /g, "-")}`,
+            prefix: `${blogPostPrefix}/categories/${tagNameDashed}`,
           },
         })
       }

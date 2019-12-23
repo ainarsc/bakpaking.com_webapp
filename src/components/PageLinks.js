@@ -35,17 +35,15 @@ const StyledLink = styled(Link)`
 `
 
 const PageLinks = ({ pagination }) => {
-  const { currentPage, numPages, blogPrefix } = pagination
+  const { currentPage, numPages, prefix } = pagination
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
 
   const prevPage =
-    currentPage - 1 === 1
-      ? blogPrefix
-      : `${blogPrefix}/${(currentPage - 1).toString()}`
+    currentPage - 1 === 1 ? prefix : `${prefix}/${(currentPage - 1).toString()}`
 
-  const nextPage = `${blogPrefix}/${(currentPage + 1).toString()}`
+  const nextPage = `${prefix}/${(currentPage + 1).toString()}`
 
   return (
     <Container>
@@ -58,7 +56,7 @@ const PageLinks = ({ pagination }) => {
       {Array.from({ length: numPages }, (_, i) => (
         <li key={`pgnr${i + 1}`}>
           <StyledLink
-            to={`${blogPrefix}${i === 0 ? "" : "/" + (i + 1)}`}
+            to={`${prefix}${i === 0 ? "" : "/" + (i + 1)}`}
             current={i + 1 === currentPage ? "rgb(40, 40, 40)" : ""}
           >
             {i + 1}
@@ -79,7 +77,7 @@ PageLinks.propTypes = {
   pagination: PropTypes.shape({
     currentPage: PropTypes.number,
     numPages: PropTypes.number,
-    blogLink: PropTypes.string,
+    prefix: PropTypes.string,
   }),
 }
 

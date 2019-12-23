@@ -9,16 +9,15 @@ import StickyBackButton from "../components/elements/StickyBackButton"
 
 const TagPosts = ({ data, pageContext }) => {
   const { blogs } = data
+  const { title, blogPostPrefix } = data.site.siteMetadata
   return (
     <>
-      <SEO title="Blog | Ainar's Travels" pathname={pageContext.blogLink} />
+      <SEO title={`Blog | ${title}`} pathname={blogPostPrefix} />
       <Layout>
-        <Link to="/blog">
+        <Link to={blogPostPrefix}>
           <StickyBackButton />
         </Link>
-
         <TagListing />
-
         <PageHeading>{pageContext.tag.toUpperCase()}</PageHeading>
         <PostListing postEdges={blogs.edges} pagination={pageContext} />
       </Layout>
@@ -28,6 +27,12 @@ const TagPosts = ({ data, pageContext }) => {
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!, $tag: String!) {
+    site {
+      siteMetadata {
+        title
+        blogPostPrefix
+      }
+    }
     blogs: allMarkdownRemark(
       sort: { fields: frontmatter___date }
       filter: { frontmatter: { tagsArr: { in: [$tag] } } }

@@ -2,7 +2,7 @@
 title: Some Amazing Post Title
 date: 2019-11-23
 keywords: Some Amazing Post Title, another keyword, and another one
-tagsArr: ["Backpacking light", "Save"]
+tagsArr: ["budget", "new zealand", "japan", "saving", "another tag"]
 path: /some-amazing-post-title-11
 featuredImg: blog-img.jpg
 published: true
