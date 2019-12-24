@@ -1,7 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import Svg from "./elements/Svg"
-import { facebook, linkedin, twitter } from "../assets/Icons"
+// import Svg from "./elements/Svg"
+import { useStaticQuery, graphql } from "gatsby"
+import Facebook from "./elements/Facebook"
+import Linkedin from "./elements/Linkedin"
+import Twitter from "./elements/Twitter"
+// import { facebook, linkedin, twitter } from "../assets/Icons"
+import { Location } from "@reach/router"
 
 const Container = styled.div`
   display: none;
@@ -27,31 +32,27 @@ const Container = styled.div`
 `
 
 const MediaIcons = ({ link }) => {
-  return (
-    <Container>
-      <a
-        href={`https://www.facebook.com/sharer/sharer.php?u=${link}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Svg dataPath={facebook.datapath} icon={"facebook"} />
-      </a>
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `)
 
-      <a
-        href={`https://twitter.com/intent/tweet?text=${link}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Svg dataPath={twitter.datapath} icon={"twitter"} />
-      </a>
-      <a
-        href={`https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=${link}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Svg dataPath={linkedin.datapath} icon={"linkedin"} />
-      </a>
-    </Container>
+  const { siteUrl } = data.site.siteMetadata
+  return (
+    <Location>
+      {({ location }) => (
+        <Container>
+          <Facebook link={siteUrl + location.pathname} />
+          <Twitter link={siteUrl + location.pathname} />
+          <Linkedin link={siteUrl + location.pathname} />
+        </Container>
+      )}
+    </Location>
   )
 }
 

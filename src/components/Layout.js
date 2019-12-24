@@ -5,6 +5,7 @@ import NavBar from "./NavBar"
 import Footer from "./Footer"
 import Main from "./Main"
 import Backdrop from "./Backdrop"
+import MediaIcons from "./MediaIcons"
 
 const Layout = ({ children }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <NavBar />
       <Backdrop>
+        <MediaIcons />
         <Main>{children}</Main>
         <Footer />
       </Backdrop>

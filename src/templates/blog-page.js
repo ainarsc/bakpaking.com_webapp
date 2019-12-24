@@ -5,17 +5,15 @@ import SEO from "../components/seo/"
 import PostListing from "../components/PostListing"
 import TagListing from "../components/TagListing"
 import { PageHeading } from "../components/elements/PageHeading"
-import MediaIcons from "../components/MediaIcons"
 
 const BlogPage = ({ data, pageContext }) => {
   const { blogs } = data
-  const { title, blogPostPrefix, siteUrl } = data.site.siteMetadata
+  const { title, blogPostPrefix } = data.site.siteMetadata
 
   return (
     <>
       <SEO title={`Blog | ${title}`} pathname={blogPostPrefix} />
       <Layout>
-        <MediaIcons link={siteUrl + blogPostPrefix} />
         <TagListing />
         <PageHeading>{"All Posts"}</PageHeading>
         <PostListing postEdges={blogs.edges} pagination={pageContext} />

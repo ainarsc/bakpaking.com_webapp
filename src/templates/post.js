@@ -5,12 +5,11 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import StickyBackButton from "../components/elements/StickyBackButton"
-import MediaIcons from "../components/MediaIcons"
 
 const Post = ({ data }) => {
   let { markdownRemark } = data
   let { frontmatter, html } = markdownRemark
-  const { blogPostPrefix, siteUrl } = data.site.siteMetadata
+  const { blogPostPrefix } = data.site.siteMetadata
 
   return (
     <>
@@ -23,7 +22,6 @@ const Post = ({ data }) => {
         image={frontmatter.featuredImg.childImageSharp.fluid.src}
       />
       <Layout>
-        <MediaIcons link={siteUrl + blogPostPrefix + frontmatter.path} />
         <Header
           imagePath={frontmatter.featuredImg.childImageSharp.fluid}
           isPost={true}
