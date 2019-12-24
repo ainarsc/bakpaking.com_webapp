@@ -2,6 +2,7 @@
 title: Some Amazing Post Title
 date: 2019-11-23
 keywords: Some Amazing Post Title, another keyword, and another one
+imgDesc: Image Alt
 tagsArr: ["hostels", "south korea", "ride trains", "riding a motorbike"]
 path: /some-amazing-post-title-22
 featuredImg: blog-img.jpg

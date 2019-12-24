@@ -105,8 +105,8 @@ const NavBar = ({ collapseNav, isExpanded }) => {
         <Brand>
           <Link onClick={() => isExpanded && collapseNav()} to="/">
             <Logo>
-              <Img src={logo} />
-              <Img src={title} />
+              <Img src={logo} alt="App logo" />
+              <Img src={title} alt="App title" />
             </Logo>
           </Link>
         </Brand>

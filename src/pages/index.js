@@ -126,8 +126,8 @@ const IndexPage = () => {
       <Container>
         <Highlight>
           <Row>
-            <Icon src={logo} />
-            <Headline src={title} />
+            <Icon src={logo} alt="App Logo" />
+            <Headline src={title} alt="App Title" />
           </Row>
 
           <Line />

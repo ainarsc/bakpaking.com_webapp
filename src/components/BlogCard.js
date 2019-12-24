@@ -64,13 +64,17 @@ const RightSide = styled.div`
   }
 `
 
-const BlogCard = ({ title, intro, link, thumbnail }) => {
+const BlogCard = ({ title, intro, link, thumbnail, imgDesc }) => {
   return (
     <Fragment>
       <Link to={link}>
         <Container>
           <LeftSide>
-            <Img fluid={thumbnail} style={{ position: "static" }} />
+            <Img
+              fluid={thumbnail}
+              style={{ position: "static" }}
+              alt={imgDesc}
+            />
           </LeftSide>
           <RightSide>
             <article>
@@ -84,7 +88,9 @@ const BlogCard = ({ title, intro, link, thumbnail }) => {
     </Fragment>
   )
 }
-
+BlogCard.defaultProps = {
+  imgDesc: "Featured Image",
+}
 BlogCard.propTypes = {
   title: PropTypes.string,
   intro: PropTypes.string,

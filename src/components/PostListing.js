@@ -12,6 +12,7 @@ const PostListing = ({ postEdges, pagination }) => {
           title={node.frontmatter.title}
           intro={node.excerpt}
           link={"/blog" + node.frontmatter.path}
+          imgDesc={node.frontmatter.imgDesc}
           thumbnail={node.frontmatter.featuredImg.childImageSharp.fluid}
         />
       ))}

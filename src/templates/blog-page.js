@@ -43,6 +43,7 @@ export const query = graphql`
             published
             title
             date(formatString: "DD MMMM, YYYY")
+            imgDesc
             featuredImg {
               childImageSharp {
                 fluid(maxWidth: 400, quality: 45) {

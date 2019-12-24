@@ -34,18 +34,21 @@ const SubHeading = styled.h2`
   }
 `
 
-const Header = ({ isPost, imagePath, date, children }) => {
+const Header = ({ isPost, imagePath, imgDesc, date, children }) => {
   return (
     <Fragment>
       <Heading>{children}</Heading>
       {isPost ? <SubHeading>{date} by Ainars Ciesa</SubHeading> : null}
       <ImgContainer>
-        <Img fluid={imagePath} />
+        <Img fluid={imagePath} alt={imgDesc} />
       </ImgContainer>
     </Fragment>
   )
 }
 
+Header.defaultProps = {
+  imgDesc: "Featured Image",
+}
 Header.propTypes = {
   isTrue: PropTypes.bool,
   imagePath: PropTypes.object,

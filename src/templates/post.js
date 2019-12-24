@@ -26,6 +26,7 @@ const Post = ({ data }) => {
           imagePath={frontmatter.featuredImg.childImageSharp.fluid}
           isPost={true}
           date={frontmatter.date}
+          imgDesc={frontmatter.imgDesc}
         >
           {frontmatter.title}
         </Header>
@@ -52,6 +53,7 @@ export const pageQuery = graphql`
         path
         title
         keywords
+        imgDesc
         featuredImg {
           childImageSharp {
             fluid(maxWidth: 500, quality: 50) {
