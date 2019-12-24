@@ -8,14 +8,16 @@ import { graphql } from "gatsby"
 const About = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const { title } = data.site.siteMetadata
 
   return (
     <>
-      <SEO title="About Me | Ainar's Travels" pathname="/about" />
+      <SEO title={`About Me | ${title}`} pathname="/about" />
       <Layout>
         <Header
           imagePath={frontmatter.featuredImg.childImageSharp.fluid}
           isTrue={false}
+          imgDesc={frontmatter.imgDesc}
         >
           {frontmatter.title}
         </Header>
@@ -27,10 +29,16 @@ const About = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: "/about" } }) {
       html
       frontmatter {
         title
+        imgDesc
         featuredImg {
           childImageSharp {
             fluid(quality: 80) {

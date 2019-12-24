@@ -1,5 +1,6 @@
 ---
 title: This Is Me
+imgDesc: Site Author With Motorbike
 path: /about
 featuredImg: about.jpg
 ---
