@@ -26,12 +26,31 @@ const Container = styled.div`
   }
 `
 
-const MediaIcons = () => {
+const MediaIcons = ({ link }) => {
   return (
     <Container>
-      <Svg dataPath={facebook.datapath} icon={"facebook"} />
-      <Svg dataPath={twitter.datapath} icon={"twitter"} />
-      <Svg dataPath={linkedin.datapath} icon={"linkedin"} />
+      <a
+        href={`https://www.facebook.com/sharer/sharer.php?u=${link}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Svg dataPath={facebook.datapath} icon={"facebook"} />
+      </a>
+
+      <a
+        href={`https://twitter.com/intent/tweet?text=${link}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Svg dataPath={twitter.datapath} icon={"twitter"} />
+      </a>
+      <a
+        href={`https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=${link}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Svg dataPath={linkedin.datapath} icon={"linkedin"} />
+      </a>
     </Container>
   )
 }

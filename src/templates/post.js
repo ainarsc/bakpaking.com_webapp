@@ -5,11 +5,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import StickyBackButton from "../components/elements/StickyBackButton"
+import MediaIcons from "../components/MediaIcons"
 
 const Post = ({ data }) => {
   let { markdownRemark } = data
   let { frontmatter, html } = markdownRemark
-  const { blogPostPrefix, logo } = data.site.siteMetadata
+  const { blogPostPrefix, siteUrl } = data.site.siteMetadata
 
   return (
     <>
@@ -19,9 +20,10 @@ const Post = ({ data }) => {
         desc={markdownRemark.excerpt}
         keywords={frontmatter.keywords}
         article={true}
-        image={logo}
+        image={frontmatter.featuredImg.childImageSharp.fluid.src}
       />
       <Layout>
+        <MediaIcons link={siteUrl + blogPostPrefix + frontmatter.path} />
         <Header
           imagePath={frontmatter.featuredImg.childImageSharp.fluid}
           isPost={true}
@@ -43,6 +45,7 @@ export const pageQuery = graphql`
       siteMetadata {
         blogPostPrefix
         logo
+        siteUrl
       }
     }
     markdownRemark(frontmatter: { path: { eq: $postPath } }) {

@@ -6,14 +6,16 @@ import PostListing from "../components/PostListing"
 import TagListing from "../components/TagListing"
 import { PageHeading } from "../components/elements/PageHeading"
 import StickyBackButton from "../components/elements/StickyBackButton"
+import MediaIcons from "../components/MediaIcons"
 
 const TagPosts = ({ data, pageContext }) => {
   const { blogs } = data
-  const { title, blogPostPrefix } = data.site.siteMetadata
+  const { title, blogPostPrefix, siteUrl } = data.site.siteMetadata
   return (
     <>
       <SEO title={`Blog | ${title}`} pathname={blogPostPrefix} />
       <Layout>
+        <MediaIcons link={siteUrl + blogPostPrefix} />
         <Link to={blogPostPrefix}>
           <StickyBackButton />
         </Link>
@@ -30,6 +32,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
         blogPostPrefix
       }
     }
