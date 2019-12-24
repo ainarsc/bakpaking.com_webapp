@@ -2,14 +2,14 @@ import React from "react"
 import Svg from "./Svg"
 import { twitter } from "../../assets/Icons"
 
-const Twitter = ({ link }) => {
+const Twitter = props => {
   return (
     <a
-      href={`https://twitter.com/intent/tweet?text=${link}`}
+      href={`https://twitter.com/intent/tweet?text=${props.link}`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Svg dataPath={twitter.datapath} icon={"twitter"} />
+      <Svg {...props} dataPath={twitter.datapath} icon={"twitter"} />
     </a>
   )
 }

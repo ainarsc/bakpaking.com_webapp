@@ -1,7 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import Svg from "./elements/Svg"
-import { facebook, linkedin, twitter, instagram, email } from "../assets/Icons"
+import Facebook from "./elements/Facebook"
+import Linkedin from "./elements/Linkedin"
+import Twitter from "./elements/Twitter"
+import Instagram from "./elements/Instagram"
+import { Location } from "@reach/router"
+import { useStaticQuery, graphql } from "gatsby"
+import { email } from "../assets/Icons"
 
 const Container = styled.footer`
   padding: 0.5rem;
@@ -56,22 +62,37 @@ const Developed = styled.div`
 `
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `)
+  const { siteUrl } = data.site.siteMetadata
+
   return (
-    <Container>
-      <Copyright>
-        <span>© {new Date().getFullYear()}</span>
-      </Copyright>
-      <Icons>
-        <Svg small dataPath={facebook.datapath} icon={"facebook"} />
-        <Svg small dataPath={linkedin.datapath} icon={"linkedin"} />
-        <Svg small dataPath={twitter.datapath} icon={"twitter"} />
-        <Svg small dataPath={instagram.datapath} icon={"instagram"} />
-        <Svg small dataPath={email.datapath} icon={"email"} />
-      </Icons>
-      <Developed>
-        <p>Developed by Ainars Ciesa</p>
-      </Developed>
-    </Container>
+    <Location>
+      {({ location }) => (
+        <Container>
+          <Copyright>
+            <span>© {new Date().getFullYear()}</span>
+          </Copyright>
+          <Icons>
+            <Facebook small link={siteUrl + location.pathname} />
+            <Twitter small link={siteUrl + location.pathname} />
+            <Linkedin small link={siteUrl + location.pathname} />
+            <Instagram small />
+            <Svg small dataPath={email.datapath} icon={"email"} />
+          </Icons>
+          <Developed>
+            <p>Developed by Ainars Ciesa</p>
+          </Developed>
+        </Container>
+      )}
+    </Location>
   )
 }
 
