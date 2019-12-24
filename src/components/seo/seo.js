@@ -108,7 +108,7 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         defaultKeywords: keywords
-        defaultImage: logo
+        defaultImage: logoAlt
         author
         siteLanguage
         ogLanguage

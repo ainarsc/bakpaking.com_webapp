@@ -5,6 +5,7 @@ module.exports = {
     author: `Ainars Ciesa`,
     keywords: `backpacking, long term travel, backpacking on a budget, travel blog, backpacker, nomad`,
     logo: `./src/images/icon.png`,
+    logoAlt: `./src/images/icon_inverted.png`,
     siteUrl: `https://cranky-minsky-3ed2f3.netlify.com`,
     siteLanguage: `en`,
     ogLanguage: `en-US`,
