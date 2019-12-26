@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Facebook from "./elements/Facebook"
 import Linkedin from "./elements/Linkedin"
 import Twitter from "./elements/Twitter"
+import Instagram from "./elements/Instagram"
+import Email from "./elements/Email"
 // import { facebook, linkedin, twitter } from "../assets/Icons"
 import { Location } from "@reach/router"
 
@@ -13,7 +15,7 @@ const Container = styled.div`
   @media only screen and (${({ theme }) => theme.mobileL}) {
     display: inline;
     position: fixed;
-    top: 40vh;
+    top: 30vh;
     left: 5px;
     width: 3rem;
     cursor: pointer;
@@ -31,7 +33,7 @@ const Container = styled.div`
   }
 `
 
-const MediaIcons = ({ link }) => {
+const MediaIcons = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -50,6 +52,8 @@ const MediaIcons = ({ link }) => {
           <Facebook link={siteUrl + location.pathname} />
           <Twitter link={siteUrl + location.pathname} />
           <Linkedin link={siteUrl + location.pathname} />
+          <Instagram />
+          <Email small />
         </Container>
       )}
     </Location>
