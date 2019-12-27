@@ -8,17 +8,17 @@ const Container = styled.div`
   @media only screen and (${({ theme }) => theme.mobileL}) {
     display: inline;
     position: fixed;
-    bottom: 3rem;
+    bottom: 3.3rem;
     left: 0;
   }
 `
 
-const MediaIcons = ({ fn }) => {
+const StickyBackButton = ({ fn, children }) => {
   return (
     <Container>
-      <BackButton fn={fn} />
+      <BackButton fn={fn}>{children}</BackButton>
     </Container>
   )
 }
 
-export default MediaIcons
+export default StickyBackButton

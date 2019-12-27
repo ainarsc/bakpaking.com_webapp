@@ -15,7 +15,7 @@ const TagPosts = ({ data, pageContext }) => {
       <SEO title={`Blog | ${title}`} pathname={blogPostPrefix} />
       <Layout>
         <Link to={blogPostPrefix}>
-          <StickyBackButton />
+          <StickyBackButton>All posts</StickyBackButton>
         </Link>
         <TagListing />
         <PageHeading>{pageContext.tag.toUpperCase()}</PageHeading>

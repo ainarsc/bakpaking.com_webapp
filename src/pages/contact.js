@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import StickyBackButton from "../components/elements/StickyBackButton"
 
 const Form = styled.form`
   width: 80%;
@@ -39,7 +40,7 @@ const Button = styled.button`
 const Textarea = styled.textarea`
   width: 100%;
   padding: 5px;
-  min-height: 230px;
+  min-height: 220px;
   margin: 3px 0 10px;
   background-color: ${({ theme }) => theme.secondaryDark};
   border: none;
@@ -67,15 +68,13 @@ const Guides = () => {
         </p>
         <label>Your Message</label>
         <Textarea />
-        {/* <p>
-          <label>
-            Text <EmailText type="textarea" name="textarea" />
-          </label>
-        </p> */}
         <p>
           <Button type="submit">Send</Button>
         </p>
       </Form>
+      <StickyBackButton fn={() => window.history.go(-1)}>
+        Go back
+      </StickyBackButton>
     </Layout>
   )
 }

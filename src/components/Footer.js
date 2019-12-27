@@ -5,6 +5,7 @@ import Facebook from "./elements/Facebook"
 import Linkedin from "./elements/Linkedin"
 import Twitter from "./elements/Twitter"
 import Instagram from "./elements/Instagram"
+import Email from "./elements/Email"
 import { Location } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import { email } from "../assets/Icons"
@@ -85,7 +86,7 @@ const Footer = () => {
             <Twitter small link={siteUrl + location.pathname} />
             <Linkedin small link={siteUrl + location.pathname} />
             <Instagram small />
-            <Svg small dataPath={email.datapath} icon={"email"} />
+            <Email small />
           </Icons>
           <Developed>
             <p>Developed by Ainars Ciesa</p>

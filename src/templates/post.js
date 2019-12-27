@@ -31,7 +31,9 @@ const Post = ({ data }) => {
           {frontmatter.title}
         </Header>
         <Article dangerouslySetInnerHTML={{ __html: html }} />
-        <StickyBackButton fn={() => window.history.back()} />
+        <StickyBackButton fn={() => window.history.back()}>
+          Go back
+        </StickyBackButton>
       </Layout>
     </>
   )

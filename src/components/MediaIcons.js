@@ -1,13 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-// import Svg from "./elements/Svg"
 import { useStaticQuery, graphql } from "gatsby"
 import Facebook from "./elements/Facebook"
 import Linkedin from "./elements/Linkedin"
 import Twitter from "./elements/Twitter"
 import Instagram from "./elements/Instagram"
 import Email from "./elements/Email"
-// import { facebook, linkedin, twitter } from "../assets/Icons"
 import { Location } from "@reach/router"
 
 const Container = styled.div`
@@ -53,7 +51,7 @@ const MediaIcons = () => {
           <Twitter link={siteUrl + location.pathname} />
           <Linkedin link={siteUrl + location.pathname} />
           <Instagram />
-          <Email small />
+          <Email />
         </Container>
       )}
     </Location>
