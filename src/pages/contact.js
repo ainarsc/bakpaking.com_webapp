@@ -1,4 +1,5 @@
 import React from "react"
+import { connect } from "react-redux"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
@@ -51,7 +52,7 @@ const Textarea = styled.textarea`
     border: 1px solid rgba(169, 245, 237, 0.4);
   }
 `
-const Guides = () => {
+const Contact = ({ prevPage, navigate }) => {
   return (
     <Layout>
       <SEO title="Contact Page" />
@@ -72,11 +73,21 @@ const Guides = () => {
           <Button type="submit">Send</Button>
         </p>
       </Form>
-      <StickyBackButton fn={() => window.history.go(-1)}>
+      <StickyBackButton
+        fn={() => {
+          console.log(prevPage)
+          navigate(prevPage)
+        }}
+      >
         Go back
       </StickyBackButton>
     </Layout>
   )
 }
 
-export default Guides
+const mapState = state => {
+  const { location } = state
+  return { prevPage: location.prevPage }
+}
+
+export default connect(mapState)(Contact)

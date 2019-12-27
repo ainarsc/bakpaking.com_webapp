@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Svg from "./elements/Svg"
 import Facebook from "./elements/Facebook"
 import Linkedin from "./elements/Linkedin"
 import Twitter from "./elements/Twitter"
@@ -8,7 +7,8 @@ import Instagram from "./elements/Instagram"
 import Email from "./elements/Email"
 import { Location } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
-import { email } from "../assets/Icons"
+import { pushPage } from "../state/actions/locationActions"
+import { connect } from "react-redux"
 
 const Container = styled.footer`
   padding: 0.5rem;
@@ -62,7 +62,7 @@ const Developed = styled.div`
   }
 `
 
-const Footer = () => {
+const Footer = ({ prevPage, pushPage }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -86,7 +86,14 @@ const Footer = () => {
             <Twitter small link={siteUrl + location.pathname} />
             <Linkedin small link={siteUrl + location.pathname} />
             <Instagram small />
-            <Email small />
+            <Email
+              small
+              onClick={() =>
+                location.pathname !== "/contact" &&
+                location.pathname !== prevPage &&
+                pushPage(location.pathname)
+              }
+            />
           </Icons>
           <Developed>
             <p>Developed by Ainars Ciesa</p>
@@ -96,5 +103,14 @@ const Footer = () => {
     </Location>
   )
 }
-
-export default Footer
+const mapState = state => {
+  const { location } = state
+  return { prevPage: location.prevPage }
+}
+const mapDispatch = {
+  pushPage,
+}
+export default connect(
+  mapState,
+  mapDispatch
+)(Footer)

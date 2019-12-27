@@ -1,5 +1,6 @@
 import { combineReducers } from "redux"
 import uiReducer from "./uiReducer"
+import locationReducer from "./locationReducer"
 
 // const appReducer = combineReducers({
 //   uiReducer: uiReducer,
@@ -12,4 +13,5 @@ import uiReducer from "./uiReducer"
 
 export default combineReducers({
   ui: uiReducer,
+  location: locationReducer,
 })

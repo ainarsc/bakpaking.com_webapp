@@ -1,4 +1,5 @@
 import React from "react"
+import { connect } from "react-redux"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Facebook from "./elements/Facebook"
@@ -7,6 +8,7 @@ import Twitter from "./elements/Twitter"
 import Instagram from "./elements/Instagram"
 import Email from "./elements/Email"
 import { Location } from "@reach/router"
+import { pushPage } from "../state/actions/locationActions"
 
 const Container = styled.div`
   display: none;
@@ -31,7 +33,7 @@ const Container = styled.div`
   }
 `
 
-const MediaIcons = () => {
+const MediaIcons = ({ pushPage, prevPage }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -51,11 +53,27 @@ const MediaIcons = () => {
           <Twitter link={siteUrl + location.pathname} />
           <Linkedin link={siteUrl + location.pathname} />
           <Instagram />
-          <Email />
+          <Email
+            onClick={() =>
+              location.pathname !== "/contact" &&
+              location.pathname !== prevPage &&
+              pushPage(location.pathname)
+            }
+          />
         </Container>
       )}
     </Location>
   )
 }
 
-export default MediaIcons
+const mapState = state => {
+  const { location } = state
+  return { prevPage: location.prevPage }
+}
+const mapDispatch = {
+  pushPage,
+}
+export default connect(
+  mapState,
+  mapDispatch
+)(MediaIcons)
