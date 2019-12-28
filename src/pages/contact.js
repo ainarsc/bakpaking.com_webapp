@@ -70,16 +70,16 @@ const Contact = ({ prevPage, navigate }) => {
         <input type="hidden" name="form-name" value="contact" />
         <p>
           <label htmlFor="name">
-            Name <Input type="text" name="name" />
+            Name <Input type="text" name="name" required />
           </label>
         </p>
         <p>
           <label htmlFor="email">
-            Email <Input type="email" name="email" />
+            Email <Input type="email" name="email" required />
           </label>
         </p>
         <label htmlFor="message">Your Message</label>
-        <Textarea name="message" />
+        <Textarea name="message" required />
         <p>
           <Button type="submit">Send</Button>
         </p>
