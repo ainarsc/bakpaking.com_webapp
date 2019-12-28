@@ -56,19 +56,30 @@ const Contact = ({ prevPage, navigate }) => {
   return (
     <Layout>
       <SEO title="Contact Page" />
-      <Form name="contact" netlify>
+      <Form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={event => {
+          event.preventDefault()
+          navigate("/success")
+        }}
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <p>
-          <label>
+          <label htmlFor="name">
             Name <Input type="text" name="name" />
           </label>
         </p>
         <p>
-          <label>
+          <label htmlFor="email">
             Email <Input type="email" name="email" />
           </label>
         </p>
-        <label>Your Message</label>
-        <Textarea />
+        <label htmlFor="message">Your Message</label>
+        <Textarea name="message" />
         <p>
           <Button type="submit">Send</Button>
         </p>
