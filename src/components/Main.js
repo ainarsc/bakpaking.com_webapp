@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const MainContainer = styled.main`
-  width: 100%;
+  width: 95%;
   max-width: 900px;
   margin: 5rem auto 3rem;
   min-height: calc(100vh - 7rem - 8rem);

@@ -6,6 +6,7 @@ import MenuIcon from "./elements/MenuIcon"
 import CollapseMenu from "./CollapseMenu"
 import { useOnClickOutside } from "../hooks"
 import { collapseNav } from "../state/actions/uiActions"
+import { pushPage } from "../state/actions/locationActions"
 import PropTypes from "prop-types"
 import logo from "../images/icon.png"
 import title from "../images/title.png"
@@ -91,7 +92,7 @@ const NavLinks = styled.ul`
   }
 `
 
-const NavBar = ({ collapseNav, isExpanded }) => {
+const NavBar = ({ collapseNav, isExpanded, pushPage, prevPage }) => {
   const node = useRef()
 
   useOnClickOutside(node, () => {
@@ -128,6 +129,22 @@ const NavBar = ({ collapseNav, isExpanded }) => {
               About
             </Link>
           </li>
+          <li>
+            <Link
+              activeClassName="is-active"
+              to="/contact"
+              onClick={() => {
+                if (window.location.pathname === "/contact") {
+                  return
+                } else {
+                  window.location.pathname !== prevPage &&
+                    pushPage(window.location.pathname)
+                }
+              }}
+            >
+              Contact
+            </Link>
+          </li>
         </NavLinks>
       </Container>
       <CollapseMenu />
@@ -141,13 +158,10 @@ NavBar.propTypes = {
 }
 
 const mapState = state => {
-  const { ui } = state
-  return { isExpanded: ui.isExpanded }
+  const { ui, location } = state
+  return { isExpanded: ui.isExpanded, prevPage: location.prevPage }
 }
 
-const mapDispatch = { collapseNav }
+const mapDispatch = { collapseNav, pushPage }
 
-export default connect(
-  mapState,
-  mapDispatch
-)(NavBar)
+export default connect(mapState, mapDispatch)(NavBar)

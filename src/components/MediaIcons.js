@@ -6,7 +6,6 @@ import Facebook from "./elements/Facebook"
 import Linkedin from "./elements/Linkedin"
 import Twitter from "./elements/Twitter"
 import Instagram from "./elements/Instagram"
-import Email from "./elements/Email"
 import { Location } from "@reach/router"
 import { pushPage } from "../state/actions/locationActions"
 
@@ -15,7 +14,7 @@ const Container = styled.div`
   @media only screen and (${({ theme }) => theme.mobileL}) {
     display: inline;
     position: fixed;
-    top: 30vh;
+    top: 35vh;
     left: 5px;
     width: 3rem;
     cursor: pointer;
@@ -53,15 +52,6 @@ const MediaIcons = ({ pushPage, prevPage }) => {
           <Twitter link={siteUrl + location.pathname} />
           <Linkedin link={siteUrl + location.pathname} />
           <Instagram />
-          <Email
-            onClick={() => {
-              if (location.pathname === "/contact") {
-                return
-              } else {
-                location.pathname !== prevPage && pushPage(location.pathname)
-              }
-            }}
-          />
         </Container>
       )}
     </Location>

@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import styled from "styled-components"
 // import { useSpring, animated } from "react-spring"
 import { collapseNav } from "../state/actions/uiActions"
+import { pushPage } from "../state/actions/locationActions"
 import PropTypes from "prop-types"
 
 // const CollapseWrapper = styled(animated.div)`
@@ -27,7 +28,7 @@ const NavLinks = styled.ul`
   }
 
   & a {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding: 5px;
     font-style: bold;
     line-height: 2.5;
@@ -45,7 +46,7 @@ const NavLinks = styled.ul`
   }
 `
 
-const CollapseMenu = ({ isExpanded, collapseNav }) => {
+const CollapseMenu = ({ isExpanded, collapseNav, pushPage, prevPage }) => {
   // const { open } = useSpring({ open: isExpanded ? 0 : 1 })
 
   useEffect(() => {
@@ -99,6 +100,23 @@ const CollapseMenu = ({ isExpanded, collapseNav }) => {
               About
             </Link>
           </li>{" "}
+          <li>
+            <Link
+              onClick={() => {
+                collapseNav()
+                if (window.location.pathname === "/contact") {
+                  return
+                } else {
+                  window.location.pathname !== prevPage &&
+                    pushPage(window.location.pathname)
+                }
+              }}
+              activeClassName="is-active"
+              to="/contact"
+            >
+              Contact
+            </Link>
+          </li>{" "}
         </NavLinks>
       </CollapseWrapper>
     )
@@ -114,13 +132,11 @@ CollapseMenu.propTypes = {
 
 const mapDispatch = {
   collapseNav,
+  pushPage,
 }
 const mapState = state => {
-  const { ui } = state
-  return { isExpanded: ui.isExpanded }
+  const { ui, location } = state
+  return { isExpanded: ui.isExpanded, prevPage: location.prevPage }
 }
 
-export default connect(
-  mapState,
-  mapDispatch
-)(CollapseMenu)
+export default connect(mapState, mapDispatch)(CollapseMenu)

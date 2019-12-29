@@ -1,9 +1,7 @@
 import React from "react"
-import { connect } from "react-redux"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
-import StickyBackButton from "../components/elements/StickyBackButton"
 
 const Form = styled.form`
   width: 80%;
@@ -52,7 +50,7 @@ const Textarea = styled.textarea`
     border: 1px solid rgba(169, 245, 237, 0.4);
   }
 `
-const Contact = ({ prevPage, navigate }) => {
+const Contact = ({ navigate }) => {
   return (
     <Layout>
       <SEO title="Contact Page" />
@@ -63,7 +61,6 @@ const Contact = ({ prevPage, navigate }) => {
         data-netlify-honeypot="bot-field"
         onSubmit={event => {
           event.preventDefault()
-          console.log(window.location)
           navigate("/success", { replace: false })
         }}
       >
@@ -85,18 +82,8 @@ const Contact = ({ prevPage, navigate }) => {
           <Button type="submit">Send</Button>
         </p>
       </Form>
-      {prevPage && (
-        <StickyBackButton fn={() => navigate(prevPage)}>
-          Go back
-        </StickyBackButton>
-      )}
     </Layout>
   )
 }
 
-const mapState = state => {
-  const { location } = state
-  return { prevPage: location.prevPage }
-}
-
-export default connect(mapState)(Contact)
+export default Contact
