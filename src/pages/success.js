@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo/seo"
 import StickyBackButton from "../components/elements/StickyBackButton"
 

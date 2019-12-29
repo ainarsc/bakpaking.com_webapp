@@ -73,7 +73,4 @@ const mapState = state => {
 const mapDispatch = {
   pushPage,
 }
-export default connect(
-  mapState,
-  mapDispatch
-)(MediaIcons)
+export default connect(mapState, mapDispatch)(MediaIcons)
