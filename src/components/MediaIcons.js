@@ -54,11 +54,13 @@ const MediaIcons = ({ pushPage, prevPage }) => {
           <Linkedin link={siteUrl + location.pathname} />
           <Instagram />
           <Email
-            onClick={() =>
-              location.pathname !== "/contact" &&
-              location.pathname !== prevPage &&
-              pushPage(location.pathname)
-            }
+            onClick={() => {
+              if (location.pathname === "/contact") {
+                return
+              } else {
+                location.pathname !== prevPage && pushPage(location.pathname)
+              }
+            }}
           />
         </Container>
       )}

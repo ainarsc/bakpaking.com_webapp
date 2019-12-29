@@ -1,7 +1,9 @@
 import { PUSH_PAGE } from "../actions/actionTypes"
 
+let empty
+
 const initialState = {
-  prevPage: null,
+  prevPage: empty,
 }
 export default function(state = initialState, action) {
   const { type, data } = action

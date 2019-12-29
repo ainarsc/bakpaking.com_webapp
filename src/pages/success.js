@@ -7,15 +7,10 @@ import StickyBackButton from "../components/elements/StickyBackButton"
 const Success = ({ navigate, prevPage }) => (
   <Layout>
     <SEO title="Success page" />
-
     <p>Thank you contacting me! I will be in touch with you soon!</p>
-    <StickyBackButton
-      fn={() => {
-        navigate(prevPage)
-      }}
-    >
-      Go back
-    </StickyBackButton>
+    {prevPage && (
+      <StickyBackButton fn={() => navigate(prevPage)}>Go back</StickyBackButton>
+    )}
   </Layout>
 )
 const mapState = state => {

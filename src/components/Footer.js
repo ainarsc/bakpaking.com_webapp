@@ -88,11 +88,13 @@ const Footer = ({ prevPage, pushPage }) => {
             <Instagram small />
             <Email
               small
-              onClick={() =>
-                location.pathname !== "/contact" &&
-                location.pathname !== prevPage &&
-                pushPage(location.pathname)
-              }
+              onClick={() => {
+                if (location.pathname === "/contact") {
+                  return
+                } else {
+                  location.pathname !== prevPage && pushPage(location.pathname)
+                }
+              }}
             />
           </Icons>
           <Developed>
@@ -110,7 +112,4 @@ const mapState = state => {
 const mapDispatch = {
   pushPage,
 }
-export default connect(
-  mapState,
-  mapDispatch
-)(Footer)
+export default connect(mapState, mapDispatch)(Footer)

@@ -63,7 +63,8 @@ const Contact = ({ prevPage, navigate }) => {
         data-netlify-honeypot="bot-field"
         onSubmit={event => {
           event.preventDefault()
-          navigate("/success")
+          console.log(window.location)
+          navigate("/success", { replace: false })
         }}
       >
         <input type="hidden" name="bot-field" />
@@ -84,14 +85,11 @@ const Contact = ({ prevPage, navigate }) => {
           <Button type="submit">Send</Button>
         </p>
       </Form>
-      <StickyBackButton
-        fn={() => {
-          console.log(prevPage)
-          navigate(prevPage)
-        }}
-      >
-        Go back
-      </StickyBackButton>
+      {prevPage && (
+        <StickyBackButton fn={() => navigate(prevPage)}>
+          Go back
+        </StickyBackButton>
+      )}
     </Layout>
   )
 }
