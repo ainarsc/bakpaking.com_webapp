@@ -1,10 +1,10 @@
 ---
-title: Some Amazing Post Title
-date: 2019-11-23
-keywords: Some Amazing Post Title, another keyword, and another one
+title: My New Zealand Experience
+date: 2020-01-02
+keywords: new zealand, backpacking new zealand, working holiday
+path: /my-new-zealand-experience
 imgDesc: Image Alt
-tagsArr: ["vietnam", "south korea", "ride trains", "costs of backpacking japan"]
-path: /some-amazing-post-title-16
+tagsArr: ["new zealand"]
 featuredImg: blog-img.jpg
 published: true
 ---
@@ -12,13 +12,16 @@ published: true
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates
 ipsam porro nisi reiciendis labore sint similique cumque, mollitia quam?
 Quia provident amet possimus cupiditate libero non, autem suscipit vero
-harum assumenda. Itaque et similique rem consequatur eaque nemo. Illo,
+harum assumenda.
+
+Itaque et similique rem consequatur eaque nemo. Illo,
 suscipit. Ab commodi, ad repudiandae iusto tempore, sint, autem nihil
 laudantium architecto accusantium sit ipsam. Fuga hic aperiam incidunt
 tempora quod, doloremque aspernatur in fugiat quae pariatur. Recusandae,
 voluptatum voluptas itaque, doloribus quam ad ducimus quasi facere vel
 amet ratione alias nam sequi incidunt reprehenderit asperiores, hic modi
 ab repellat nemo provident! Perferendis illum molestiae, vitae iure vel
+
 magnam temporibus qui! Atque saepe, obcaecati quo veritatis cum nesciunt
 repellendus reiciendis numquam reprehenderit suscipit fuga minus
 exercitationem adipisci soluta eos odit. Dolores odio sed dignissimos
