@@ -2,7 +2,7 @@
 title: My New Zealand Experience
 date: 2020-01-02
 keywords: new zealand, backpacking new zealand, working holiday
-path: /my-new-zealand-experience
+path: /my-new-zealand-experience-343444
 imgDesc: Image Alt
 tagsArr: ["new zealand"]
 featuredImg: blog-img.jpg
