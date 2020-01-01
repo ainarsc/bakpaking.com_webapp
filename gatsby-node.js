@@ -95,16 +95,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       // Number of pages for the tag rounded up
       const numTagPages = Math.ceil(tag.totalCount / postsPerPage)
       // Tag page url
-      let tagUrl = `${blogPostPrefix}/categories/${tagNameDashed}`
+      const tagUrl = `${blogPostPrefix}/categories/${tagNameDashed}`
 
       for (i = 0; i < numTagPages; i++) {
         const currPage = i + 1
+        let tagUrlInstance = tagUrl
         if (numTagPages > 1 && i > 0) {
-          tagUrl = tagUrl + `/${currPage}`
+          tagUrlInstance = tagUrl + `/${currPage}`
         }
 
         createPage({
-          path: tagUrl,
+          path: tagUrlInstance,
           component: tagPosts,
           context: {
             tag: tagName,
