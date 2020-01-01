@@ -9,9 +9,6 @@ const Article = styled.article`
   @media only screen and (${({ theme }) => theme.mobileL}) {
     line-height: 1.8rem;
   }
-  @media only screen and (${({ theme }) => theme.tablet}) {
-    text-align: justify;
-  }
 `
 
 export default Article
