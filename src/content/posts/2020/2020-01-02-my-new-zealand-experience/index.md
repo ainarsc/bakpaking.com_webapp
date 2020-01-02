@@ -19,7 +19,7 @@ After couple of weeks I ended up renting a room in Auckland CBD and was fully ex
 
 Many such jobs were available at the time and it was a bit difficult to choose which one to roll with, I received responses from few I applied to. Nonetheless it was a right choice in a way as I met a lot of cool people there and I ended up sticking with couple of them after finishing the kiwi fruit picking season and spent my entire time in New Zealand (year and a half) with those people.
 
-Going to Pauanui to do fruit picking wasn't the best choice financially though. I barely saved any money there despite sticking with the job for 3 months. Weather was not in favor of picking most of the time so we got only 2 weeks of solid work and the other times we were scrambling to get any work. Basically we were barely working for 3 months, it was fun though.
+Going to Pauanui to do fruit picking wasn't the best choice financially though. I barely saved any money there despite sticking with the job for 3 months. Weather was not in favor of picking most of the time so we got only 2 weeks of solid work and the other times we were scrambling to get any work. Basically we were working barely for 3 months, it was fun though.
 
 I met some interesting characters while working there, explored the rural New Zealand, learned to play a guitar, went to hot water beaches and overall had a blast staying in our backpacker house with other travellers. Some weird moments I have to highlight - someone stole someones chicken in our house and we just couldn't figure out who was at fault, also our crazy neighbors involved us and the police in their domicile conflict (both were crackheads).
 
