@@ -38,23 +38,7 @@ const Brand = styled.div`
 const Logo = styled.div`
   display: inline-block;
   position: relative;
-  /* flex-direction: row;
-  align-items: flex-start; */
   padding-left: 2rem;
-  /* h1 {
-    display: none;
-    font-family: "amatic sc";
-    padding: 0 0.5rem;
-    margin-top: -0.5rem;
-    :hover {
-      background: none;
-    }
-    @media only screen and (${({ theme }) => theme.tabletS}) {
-      display: inherit;
-      position: absolute;
-      font-size: 3.3rem;
-    }
-  } */
 
   @media only screen and (${({ theme }) => theme.tablet}) {
     padding-left: 3rem;
@@ -64,7 +48,10 @@ const Img = styled.img`
   height: 3.5rem;
   padding-right: 5px;
 `
-
+const AppName = styled(Img)`
+  height: 3.3rem;
+  padding-bottom: 3px;
+`
 /// MENU LINKS ///
 const NavLinks = styled.ul`
   display: none;
@@ -107,7 +94,7 @@ const NavBar = ({ collapseNav, isExpanded, pushPage, prevPage }) => {
           <Link onClick={() => isExpanded && collapseNav()} to="/">
             <Logo>
               <Img src={logo} alt="App logo" />
-              <Img src={title} alt="App title" />
+              <AppName src={title} alt="App title" />
             </Logo>
           </Link>
         </Brand>
