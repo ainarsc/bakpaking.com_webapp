@@ -41,7 +41,7 @@ export const pageQuery = graphql`
         imgDesc
         featuredImg {
           childImageSharp {
-            fluid(quality: 80) {
+            fluid(quality: 80, maxWidth: 700) {
               ...GatsbyImageSharpFluid
             }
           }

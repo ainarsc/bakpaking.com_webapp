@@ -34,6 +34,13 @@ const SubHeading = styled.h2`
   }
 `
 
+const Line = styled.div`
+  width: 60%;
+  height: 1px;
+  background: ${({ theme }) => theme.secondaryLight};
+  margin-top: 1.2rem;
+`
+
 const Header = ({ isPost, imagePath, imgDesc, date, children }) => {
   return (
     <Fragment>
@@ -42,6 +49,7 @@ const Header = ({ isPost, imagePath, imgDesc, date, children }) => {
       <ImgContainer>
         <Img fluid={imagePath} alt={imgDesc} />
       </ImgContainer>
+      <Line />
     </Fragment>
   )
 }

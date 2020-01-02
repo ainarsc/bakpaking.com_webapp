@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 const Form = styled.form`
   width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -39,7 +40,7 @@ const Button = styled.button`
 const Textarea = styled.textarea`
   width: 100%;
   padding: 5px;
-  min-height: 220px;
+  min-height: calc(100vh - 7rem - 8rem - 210px);
   margin: 3px 0 10px;
   background-color: ${({ theme }) => theme.secondaryDark};
   border: none;
@@ -48,6 +49,9 @@ const Textarea = styled.textarea`
   :focus {
     outline: none;
     border: 1px solid rgba(169, 245, 237, 0.4);
+  }
+  @media only screen and (${({ theme }) => theme.tablet}) {
+    min-height: calc(100vh - 3.5rem - 8rem - 210px);
   }
 `
 const Contact = ({ navigate }) => {

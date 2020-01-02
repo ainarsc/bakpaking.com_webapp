@@ -7,7 +7,7 @@ const Button = styled.button`
   margin: 0.8rem 0;
   display: flex;
   padding: 0 2px;
-  width: 2.7rem;
+  width: 2.8rem;
   border: none;
   border-radius: 2px;
   background-color: ${({ theme }) => theme.secondaryDark};
@@ -28,8 +28,8 @@ const Button = styled.button`
     fill: #14a76c;
   }
   @media only screen and (${({ theme }) => theme.laptopS}) {
-    padding: 6px 2px;
-    width: 5rem;
+    padding: 6px 4px;
+    width: 5.2rem;
     svg {
       display: none;
     }

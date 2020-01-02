@@ -9,6 +9,13 @@ const Article = styled.article`
   @media only screen and (${({ theme }) => theme.mobileL}) {
     line-height: 1.8rem;
   }
+  p {
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
 `
 
 export default Article
