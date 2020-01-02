@@ -5,36 +5,20 @@ path: /about
 featuredImg: about.jpg
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates
-ipsam porro nisi reiciendis labore sint similique cumque, mollitia quam?
-Quia provident amet possimus cupiditate libero non, autem suscipit vero
-harum assumenda. Itaque et similique rem consequatur eaque nemo. Illo,
-suscipit. Ab commodi, ad repudiandae iusto tempore, sint, autem nihil
-laudantium architecto accusantium sit ipsam. Fuga hic aperiam incidunt
-tempora quod, doloremque aspernatur in fugiat quae pariatur. Recusandae,
-voluptatum voluptas itaque, doloribus quam ad ducimus quasi facere vel
-amet ratione alias nam sequi incidunt reprehenderit asperiores, hic modi
-ab repellat nemo provident! Perferendis illum molestiae, vitae iure vel
-magnam temporibus qui! Atque saepe, obcaecati quo veritatis cum nesciunt
-repellendus reiciendis numquam reprehenderit suscipit fuga minus
-exercitationem adipisci soluta eos odit. Dolores odio sed dignissimos
-hic tenetur, tempore nam suscipit. Veritatis quam rem iure fugiat
-necessitatibus ad voluptate quia molestiae, eaque, assumenda mollitia
-magnam! Amet impedit cum illo cumque deleniti distinctio, non est
-dignissimos sit tempore facilis fuga maiores rerum assumenda alias
-explicabo animi? Asperiores suscipit provident temporibus debitis
-accusantium numquam enim? Adipisci iure delectus numquam nesciunt
-voluptas ea ullam impedit inventore quod eum consequuntur ipsa sunt,
-mollitia, unde illo iusto. Assumenda, voluptate fuga. Accusamus
-inventore repellat accusantium aspernatur quia nobis officiis tempora
-quo distinctio doloremque voluptas beatae aut animi temporibus minus
-officia adipisci provident iusto eum quasi, tenetur totam! Dicta fuga
-officia, repellendus laborum dolor quas explicabo cum vero, laudantium
-ex eveniet possimus sequi eaque neque magnam saepe in fugiat quae illum
-a sapiente mollitia ducimus? Saepe laborum iure dolore quis animi
-accusamus nemo alias possimus beatae! Ipsam dolore sit deserunt
-accusamus sint nobis iusto doloribus, explicabo cupiditate veritatis
-natus ducimus nulla similique deleniti dolorum. Officiis quam soluta
-laborum laudantium rerum voluptates earum voluptatum provident
-accusantium repellendus repellat nobis, accusamus vel inventore esse
-nostrum optio tenetur tempore qui nisi aspernatur placeat.
+My name is Ainars Ciesa and I left my home in Latvia to travel the world back in 2016. I always dreamed of travelling long term however it always seemed like an impossible goal, especially coming from a country with not so good economy. I got my bachelor's degree in 2014 and I was working full time for a major nordic bank since my second year in uni. At the time I thought this is the path for me and I will stick to it but it just wasn't doing it for me.
+
+Later I went to see a talk by a girl who backpacked New Zealand and I found out about a working holiday visa which allows one to live and work in New Zealand for up to a year. Seeing how beautiful New Zealand looked I knew I had to take advantage of this.
+
+I had a lot of time until the applications would open so in the meantime I ended up going on a trip to Indonesia with a small backpacking tour company. I loved the trip so much and it basically opened my eyes. I learned that long term budget backpacking is so common these days and it's really easy to do it, especially if you just change your mindset and save a little bit of money.
+
+I loved Asia and Bali so much I knew I would have to do this again by myself. I learned a lot during this trip and went home I started reading up more about backpacking asia in particular. It was difficult to shake off this trip and go to work the very next day though.
+
+I read about all kinds of possibilities to save money travelling like wwoofing, workaway, house sitting etc. I also found out that working holiday visas are rather common and most developed countries have a lot more of them. Still to this day I am frustrated that I don't have access to one for Australia.
+
+In 2016 me, my cousin and his fiancee applied for New Zealand visa however we still weren't ready to go. That year I changed my job and quit altogether after couple of months because an opportunity came up to go to Iceland before heading to New Zealand. And this was the official start of a completely new life.
+
+Since then I have spent five months working and exploring Iceland, I backpacked around Vietnam, visited Kuala Lumpur, spent an amazing year and a half exploring New Zealand and lastly I went on a 9 month long backpacking trip that started in Australia and ended in Iceland.
+
+During this 9 month long journey I visited Australia, Japan, South Korea, Nepal, India, Singapore, Vietnam, Cambodia, Laos, UK, Czech Republic. I did a 6000km long motorcycle trip in Asia, hiked for 10 days in Himalayas reaching 5400m in altitude, rode about 4000km in local Indian trains, did rock climbing in Laos and Vietnam, spent Christmas on a little tropical island in Cambodia, watched fireworks from rooftop bar in Siem Reap on new years eve, met so many incredible people and so much more.
+
+Right now I am enjoying the fresh air of Iceland and taking a break from all of this before starting a new chapter in Canada.
