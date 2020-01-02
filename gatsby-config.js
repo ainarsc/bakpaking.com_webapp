@@ -6,7 +6,7 @@ module.exports = {
     keywords: `backpacking, long term travel, backpacking on a budget, travel blog, backpacker, nomad`,
     icon: `./src/images/icon.png`,
     iconAlt: `./src/images/icon_inverted.png`,
-    siteUrl: `https://cranky-minsky-3ed2f3.netlify.com`,
+    siteUrl: `https://bakpaking.com`,
     siteLanguage: `en`,
     ogLanguage: `en-US`,
     schemaHeadline: `All about long term backpacking on a budget`,
