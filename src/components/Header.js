@@ -35,10 +35,18 @@ const SubHeading = styled.h2`
 `
 
 const Line = styled.div`
-  width: 60%;
+  width: 70%;
   height: 1px;
-  background: ${({ theme }) => theme.secondaryLight};
-  margin-top: 1.2rem;
+  background: linear-gradient(
+    to right,
+    rgba(230, 230, 230, 0),
+    rgba(230, 230, 230, 0.65),
+    rgba(230, 230, 230, 0)
+      /* rgba(235, 170, 30, 0),
+    rgba(235, 170, 30, 0.75),
+    rgba(204, 60, 35, 0) */
+  );
+  margin-top: 1.5rem;
 `
 
 const Header = ({ isPost, imagePath, imgDesc, date, children }) => {
