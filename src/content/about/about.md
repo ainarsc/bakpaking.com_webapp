@@ -7,7 +7,7 @@ featuredImg: about.jpg
 
 My name is Ainars Ciesa and I left my home in Latvia to travel the world back in 2016. I always dreamed of travelling long term however it always seemed like an impossible goal, especially coming from a country with not so good economy. I got my bachelor's degree in 2014 and I was working full time for a major nordic bank since my second year in uni. At the time I thought this is the path for me and I will stick to it but it just wasn't doing it for me.
 
-Later I went to see a talk by a girl who backpacked New Zealand and I found out about a working holiday visa which allows one to live and work in New Zealand for up to a year. Seeing how beautiful New Zealand looked I knew I had to take advantage of this.
+Later I went to see a talk given by a girl who backpacked New Zealand and I found out about a working holiday visa which allows one to live and work in New Zealand for up to a year. Seeing how beautiful New Zealand was I knew I had to take advantage of this.
 
 I had a lot of time until the applications would open so in the meantime I ended up going on a trip to Indonesia with a small backpacking tour company. I loved the trip so much and it basically opened my eyes. I learned that long term budget backpacking is so common these days and it's really easy to do it, especially if you just change your mindset and save a little bit of money.
 

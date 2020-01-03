@@ -3,7 +3,7 @@ title: My New Zealand Experience
 date: 2020-01-02
 keywords: new zealand, backpacking new zealand, working holiday
 path: /my-new-zealand-experience
-imgDesc: Image Alt
+imgDesc: Tongariro Alpine Crossing
 tagsArr: ["new zealand", "solo travel"]
 featuredImg: blog-img.jpg
 published: true
