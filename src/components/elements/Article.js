@@ -16,6 +16,10 @@ const Article = styled.article`
     font-weight: 600;
     font-size: 1.4rem;
   }
+  h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 `
 
 export default Article
