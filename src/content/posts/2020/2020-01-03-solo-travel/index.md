@@ -9,13 +9,13 @@ featuredImg: blog-img.jpg
 published: true
 ---
 
+When I was thinking about leaving home to travel one of my major concerns was doing this by myself. At this point in time I did not know how well the world is travelled and it felt like it is not that common to travel solo. Of course I knew plenty of people do it but I assumed only those who are more mature and are well off financially. Even in 2015 when I set off on my first trip to Southeast Asia with a local backpacking tour company I somehow didn't notice all the backpackers around or more precisely I didn't think about the surrounding people.
+
 ## Little Did I Know
 
-When I was thinking about leaving home to travel one of my major concerns was doing this by myself. At this point in time I did not know how well the world is travelled and it felt like it is not that common to travel solo. Of course I knew plenty of people do it but I assumed only those who are more mature and are well off financially.
+Only when I went to Vietnam on my own before starting my New Zealand journey realized how many people are actually solo travelers.
 
-Even in 2015 when I set off on my first trip to Southeast Asia with a local backpacking tour company I somehow didn't notice all the backpackers around or more precisely I didn't think about the surrounding people. Only when I went to Vietnam on my own before starting my New Zealand journey I started to realize how many people are actually solo travelers.
-
-This is also when I first realized how big of a deal are backpacker hostels. They are a huge reason why solo travelling is so much easier these days. My idea of a hostel was kind of moulded by these crummy old Easter European/Russian youth hostels that had not changed since Soviet Union. Of course I did not expect to see anything like this in Vietnam but this image was still in my head and I hadn't done any research about backpacker hostels so I was incredibly surprised when I checked in Hangouts Hostel in Saigon. It has since expanded a lot as I discovered during my second Saigon visit last year.
+This is also when I first discovered how big of a deal are backpacker hostels. They are a huge reason why solo travelling is so much easier these days. My idea of a hostel was kind of moulded by these crummy old Easter European/Russian youth hostels that had not changed since Soviet Union. Of course I did not expect to see anything like this in Vietnam but this image was still in my head and I hadn't done any research about backpacker hostels so I was incredibly surprised when I checked in Hangouts Hostel in Saigon. It has since expanded a lot as I discovered during my second Saigon visit last year.
 
 ## The Vietnam Trip
 
@@ -29,7 +29,7 @@ My plans changed and I decided to head north and the Canadian dude checked into 
 
 Anyway, I became friends with more people at that place we happened to go to the same next destination only with different buses. So we had formed a little group and it was that easy. We ended up going all the way north together.
 
-## Solo is fun
+## Solo Is Fun
 
 Point of this story is that solo travelling is fun and I learned that it is the best way. I spent a lot of time researching and planning this Vietnam trip and ended up completely abandoning my plan and having the time of my life. I met some awesome people. One of them I visited in Melbourne where I started my 9 month long trip in 2018. I also plan on meeting up with the dude from Canada in Toronto when I am headed there this year.
 
@@ -41,7 +41,7 @@ All of them also shaped my travels after New Zealand. For instance, I visited on
 
 I had a lot of awesome travel buddies afterwards in Asia as well. It never really stopped and a lot of new people kept coming in my life for as long as our plans matched while I was on the road.
 
-## You are never alone
+## You Are Never Alone
 
 The point is that even if you decide to go on a big solo backpacking trip you are most likely never going to be alone.
 
@@ -49,4 +49,4 @@ I was surrounded by people so much during the first couple of years of my journe
 
 There is one downside though and it is - a lot of goodbyes. You meet a lot of cool people and become really close with some so naturally you get attached to them and eventually you part ways. Dealing with it was really challenging.
 
-Still this is the best way to explore the world.
+Despite all of that this is still the best way to explore the world and the freedom is just priceless.

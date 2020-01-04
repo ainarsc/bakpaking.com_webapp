@@ -32,7 +32,7 @@ export const query = graphql`
       }
     }
     blogs: allMarkdownRemark(
-      sort: { fields: frontmatter___date }
+      sort: { fields: frontmatter___date, order: DESC }
       filter: { fileAbsolutePath: { regex: "/content/posts/" } }
       limit: $limit
       skip: $skip
