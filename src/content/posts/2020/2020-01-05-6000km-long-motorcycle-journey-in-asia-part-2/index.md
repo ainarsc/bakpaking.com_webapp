@@ -31,7 +31,7 @@ I was getting close to the Koh Rong Samloem island and that dude was right. I wa
 
 ## Christmas With Strangers
 
-Over the next 4 days I chilled at this little island that didn't even have internet. There were no roads, just sand everywhere, some guest houses, one party hostel, a couple of "restaurants" and a little village, that's about it. Anyway, I had a lot of fun over the coming days. White sand beaches, bright blue coloured sea and palm trees. I did some snorkeling and fishing, a lot of drinking and drunk night kayaking on Christmas eve. It was probably the best Christmas I ever had.
+Over the next 4 days I relaxed on the little island. There were no roads, just sand everywhere,some guest houses, one party hostel, a couple of "restaurants" and a little village, that's about it. I had a lot of fun over the coming days. White sand beaches, bright blue coloured sea and palm trees. I did some snorkeling and fishing, a lot of drinking and drunk night kayaking on Christmas eve. It was probably the best Christmas I ever had.
 
 After few days it was time to head back. I went back to Kampot and stayed there for a couple of extra nights before heading back to Phnom Penh and further to Siem Reap for the New Year's. Surprisingly, my motorcycle was still running well but I opted to do a check up in Kampot anyway.
 
