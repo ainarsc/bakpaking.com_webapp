@@ -41,7 +41,7 @@ I was set to start the trip after spending 3 weeks in Saigon but I ended up post
 
 ## So It Begins
 
-The day that I literally had to leave the country was here. I woke up late due to some heavy drinking the night before and now in a much shorter time and peak traffic I had to drive 300km to Phnom Penh in Cambodia while figuring out how to get through border with a crappy Vietnamese bike and no licence. 300km is not large distance by any means but this is Asia, the traffic is mental, the average speed is basically 25km/h in condensed cities and max speed on this kind of motorcycle is 70km/h. So I was facing a real challenge.
+The day that I literally had to leave the country was here. I woke up late due to some heavy drinking the night before and now, in a much shorter time and peak traffic, I had to drive 300km to Phnom Penh in Cambodia while figuring out how to get through border with a crappy Vietnamese bike and no licence. 300km is not large distance by any means but this is Asia, the traffic is mental, the average speed is basically 25km/h in condensed cities and max speed on this kind of motorcycle is 70km/h. So I was facing a real challenge.
 
 I finally got moving. I felt really shaky, million thoughts were rushing through my mind while trying to be alert and aware of the surrounding traffic. My first mini challenge was to get out of Saigon in one piece. It was the most terrifying thing ever but somehow I made it out.
 
@@ -53,7 +53,7 @@ I chose the main border crossing between Vietnam and Cambodia in the south. Cros
 
 Vietnamese side of the border was beautiful. It was clean, a lot of greenery and fresh air but as soon as I crossed the border it was complete opposite. The road was bad, in fact it was non-existent. Dust, dirt and chaos was everywhere. Soon I was driving through a very grim looking town that for some reason had a lot of casinos everywhere. It was not looking good. I had such a long way to go and it felt like I have been on the road forever.
 
-Thankfully the ride quality improved. I reach an actual paved road and it was empty all the way to Phnom Penh. Now I was facing my last mini challenge of the day. It was getting dark and I was still far away, the headlight on my motorcycle wasn't too good, roads were starting to get congested and there were no street lights.
+Thankfully the ride quality improved. I reached a paved road and it was empty all the way to Phnom Penh. Now I was facing my last mini challenge of the day. It was getting dark and I was still far away, the headlight on my motorcycle wasn't too good, roads were starting to get congested and there were no street lights.
 
 It turned pitch black and I was dodging potholes, trucks and people like a ninja. Soon after I reached the outskirts of the city and finally there were some street lights. Everything was going to be okay, however there were more cars in this city than in the whole Vietnam combined so it took me an extra hour to reach my hostel.
 

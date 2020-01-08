@@ -9,7 +9,7 @@ featuredImg: blog-img.jpg
 published: true
 ---
 
-After spending a couple of days in Phnom Penh it was time to head out to Kampot which was another full day ride. This time I didn't have any border crossing ahead and there was a lot less traffic in Cambodia so I was expecting a smooth ride.
+After spending a couple of days in Phnom Penh it was time to head out to Kampot which was supposed to be another long day. This time I didn't have any border crossing ahead and there was a lot less traffic in Cambodia so I was expecting a smooth ride.
 
 Getting out of Phnom Penh was a bit of a challenge as this city seemed to be dominated by cars. Huge reason why rarely who owns a car in Vietnam is tax. Import tax on cars is super high in Vietnam that is why only the wealthiest can afford them. Not the case in Cambodia. Because of this and also because there is a ton of tuk tuks on the streets in Phnom Penh it was much more difficult to ride in the city. I was still a little bit shaky riding my motorcycle, so it took me a while until I reached the countryside.
 
@@ -17,7 +17,7 @@ Getting out of Phnom Penh was a bit of a challenge as this city seemed to be dom
 
 Once I was out of the city the ride was beautiful. The road was basically empty with occasional car passing by, plus it was nicely paved. I was finally feeling relaxed riding the motorcycle.
 
-After enjoying this ride for most of the day and feeling excited about arriving early in Kampot I got hit by roadworks that stretched for 20 km all the way to the town. It was about 3pm at that point and I thought - no biggie, but this road was so bad that I had to stick to 10-15km/h occasionally stopping because of one way sections. Sun was scorching hot and dust was everywhere, this was a completely unpaved road.
+After enjoying this ride for most of the day and feeling excited about arriving early in Kampot I got hit by roadworks that stretched for 20 km all the way to the town. This road was so bad that I had to stick to 10-15km/h occasionally stopping because of one way sections. Sun was scorching hot and dust was everywhere, this was a completely unpaved road.
 
 I ended up arriving some time after 5pm and had collected all of the dust in Cambodia. I looked ridiculous. I parked my motorcycle, grabbed a shower and rewarded myself with a large pint of Cambodian beer at my hostel bar. Monkey Republic was the place and it was rather nice, if anyone is looking for accommodation in Kampot.
 
