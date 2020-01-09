@@ -35,7 +35,10 @@ export const query = graphql`
       }
     }
     blogs: allMarkdownRemark(
-      sort: { fields: frontmatter___date }
+      sort: {
+        fields: [frontmatter___date, frontmatter___title]
+        order: [DESC, DESC]
+      }
       filter: { frontmatter: { tagsArr: { in: [$tag] } } }
       skip: $skip
       limit: $limit
