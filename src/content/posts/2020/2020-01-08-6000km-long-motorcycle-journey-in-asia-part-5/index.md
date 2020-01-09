@@ -1,8 +1,8 @@
 ---
-title: 6000 km Long Motorcycle Journey in Asia, Part 5
+title: 6000km in Asia On A Motorcycle, Part 5
 date: 2020-01-08
 keywords: ho chi minh road, riding a motorcycle in vietnam, solo travel, riding a motorbike in asia, honda win, riding honda win in vietnam,
-path: /6000km-long-motorcycle-journey-in-asia-part-5
+path: /6000km-in-asia-on-a-motorcycle-part-5
 imgDesc: Overlooking Mountains
 tagsArr: ["riding a motorcycle", "vietnam"]
 featuredImg: blog-img.jpg

@@ -1,8 +1,8 @@
 ---
-title: 6000 km Long Motorcycle Journey in Asia, Part 1
+title: 6000km in Asia On A Motorcycle, Part 1
 date: 2020-01-04
 keywords: riding a motorcycle in vietnam, solo travel, riding a motorbike in vietnam, riding a motorbike in asia, honda win, riding honda win in vietnam, crossing border vietnam
-path: /6000km-long-motorcycle-journey-in-asia-part-1
+path: /6000km-in-asia-on-a-motorcycle-part-1
 imgDesc: Mountains and motorbike
 tagsArr: ["riding a motorcycle", "vietnam", "cambodia"]
 featuredImg: blog-img.jpg

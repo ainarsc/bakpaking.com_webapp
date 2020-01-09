@@ -1,8 +1,8 @@
 ---
-title: 6000 km Long Motorcycle Journey in Asia, Part 4
+title: 6000km in Asia On A Motorcycle, Part 4
 date: 2020-01-08
 keywords: riding a motorcycle in vietnam, solo travel, riding a motorbike in asia, honda win, riding honda win in vietnam, hoi an, nha trang, qui nhon, vietnam costal roads
-path: /6000km-long-motorcycle-journey-in-asia-part-4
+path: /6000km-in-asia-on-a-motorcycle-part-4
 imgDesc: Overlooking Mountains
 tagsArr: ["riding a motorcycle", "vietnam"]
 featuredImg: blog-img.jpg

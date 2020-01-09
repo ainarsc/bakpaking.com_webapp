@@ -1,8 +1,8 @@
 ---
-title: 6000 km Long Motorcycle Journey in Asia, Part 3
+title: 6000km in Asia On A Motorcycle, Part 3
 date: 2020-01-07
 keywords: riding a motorcycle in vietnam, solo travel, riding a motorbike in asia, honda win, riding honda win in vietnam, da lat, cat tien, riding in vietnam countryside
-path: /6000km-long-motorcycle-journey-in-asia-part-3
+path: /6000km-in-asia-on-a-motorcycle-part-3
 imgDesc: Overlooking Mountains
 tagsArr: ["riding a motorcycle", "vietnam"]
 featuredImg: blog-img.jpg

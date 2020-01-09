@@ -1,8 +1,8 @@
 ---
-title: 6000 km Long Motorcycle Journey in Asia, Part 2
+title: 6000km in Asia On A Motorcycle, Part 2
 date: 2020-01-05
 keywords: riding a motorcycle in cambodia, solo travel, riding a motorbike in asia, honda win, riding honda win in cambodia, siem reap, roads in cambodia,
-path: /6000km-long-motorcycle-journey-in-asia-part-2
+path: /6000km-in-asia-on-a-motorcycle-part-2
 imgDesc: Overlooking Mountains
 tagsArr: ["riding a motorcycle", "vietnam", "cambodia"]
 featuredImg: blog-img.jpg
