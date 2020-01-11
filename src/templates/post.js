@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "../components/Header"
 import Article from "../components/elements/Article"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import StickyBackButton from "../components/elements/StickyBackButton"
@@ -31,9 +31,9 @@ const Post = ({ data }) => {
           {frontmatter.title}
         </Header>
         <Article dangerouslySetInnerHTML={{ __html: html }} />
-        <StickyBackButton fn={() => window.history.back()}>
-          Go back
-        </StickyBackButton>
+        <Link to="/blog">
+          <StickyBackButton>All Posts</StickyBackButton>
+        </Link>
       </Layout>
     </>
   )
