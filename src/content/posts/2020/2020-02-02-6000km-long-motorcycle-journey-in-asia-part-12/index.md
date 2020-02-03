@@ -2,7 +2,7 @@
 title: 6000km in Asia On A Motorcycle, Part 12
 date: 2020-02-02
 keywords: ha giang, cao bang, cat ba, solo travel, riding a motorbike in asia, honda win, riding honda win in vietnam, northern vietnam, ride in ha giang, ha giang loop, ha noi, ma pi leng pass, surreal landscapes, hanoi, cao bang to halong bay
-path: /6000km-in-asia-on-a-motorcycle-part-11
+path: /6000km-in-asia-on-a-motorcycle-part-12
 imgDesc: Mountains
 tagsArr: ["riding a motorcycle", "vietnam"]
 featuredImg: blog-img.jpg
